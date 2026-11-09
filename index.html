@@ -107,6 +107,12 @@ tr:nth-child(even) td{background:#FBF8F2}
 .escuro .card p{color:#C9CBD0}
 
 /* conteúdo */
+.grp{display:grid;gap:10px;margin-top:24px}
+.grp>div{background:#fff;border-radius:12px;padding:14px 16px;box-shadow:0 0 0 1px var(--linha)}
+.grp b{display:block;font:800 14px var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--sol);margin-bottom:8px}
+.grp p{display:flex;flex-wrap:wrap;gap:6px 8px;margin:0}
+.grp i{font-style:normal;font-size:15px;background:var(--areia);border-radius:99px;padding:5px 12px;color:var(--t1)}
+@media(min-width:760px){.grp{grid-template-columns:1fr 1fr}}
 .mod{display:grid;gap:12px;margin-top:28px;grid-template-columns:1fr}
 .mod div{display:flex;gap:14px;background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 0 0 1px var(--linha)}
 .mod b.n{font:800 30px/1 var(--cond);color:var(--sol);min-width:34px}
@@ -317,22 +323,11 @@ footer .leg{max-width:760px}
     <span class="kick">O que tem dentro</span>
     <h2>Um manual <span class="sol">completo</span>, do primeiro dia à reta final</h2>
     <p class="lead">Mais de 100 páginas, escritas para serem usadas, não só lidas: figura de cada exercício, três dias de comida-exemplo, treino animado para ver na TV, regras de decisão e planilha para acompanhar.</p>
-    <div class="mod">
-      <div><b class="n">01</b><p><strong>Dá tempo?</strong><span>A conta do relógio e o que a literatura considera ritmo moderado.</span></p></div>
-      <div><b class="n">02</b><p><strong>Antes de começar</strong><span>Triagem de saúde (PAR-Q+), medidas e ponto de partida.</span></p></div>
-      <div><b class="n">D1</b><p><strong>Comece aqui</strong><span>Seu primeiro dia em 15 minutos, com a ordem de leitura.</span></p></div>
-      <div><b class="n">04</b><p><strong>Seus números</strong><span>Como estimar, ajustar e acompanhar, com exemplos e piso de segurança.</span></p></div>
-      <div><b class="n">05</b><p><strong>O prato</strong><span>Guia Alimentar, tabela TACO da UNICAMP, rótulo, álcool e suplementos.</span></p></div>
-      <div><b class="n">5B</b><p><strong>Três dias-exemplo</strong><span>Cardápio ilustrativo com gramas, proteína e calorias calculadas pela TACO.</span></p></div>
-      <div><b class="n">06</b><p><strong>Como o treino funciona</strong><span>Volume, frequência, esforço e carga: o que a pesquisa mostra.</span></p></div>
-      <div><b class="n">07</b><p><strong>O programa de treino</strong><span>Planos A (3 dias), B (4 dias) e C (em casa), com figura de cada exercício e versão de 45 minutos.</span></p></div>
-      <div><b class="n">08</b><p><strong>Cardio e passos</strong><span>Quanto fazer e o que ignorar. Não existe número mágico.</span></p></div>
-      <div><b class="n">10</b><p><strong>As 6 semanas</strong><span>Calendário, rotina de dados e regras de decisão.</span></p></div>
-      <div><b class="n">12</b><p><strong>Mitos e erros comuns</strong><span>Gordura localizada, jejum, low-carb, “detox” e “queimadores”.</span></p></div>
-      <div><b class="n">13</b><p><strong>Sinais de alerta</strong><span>Quando parar e onde buscar ajuda gratuita no SUS (UBS, CAPS, CVV 188, SAMU 192).</span></p></div>
-      <div><b class="n">14</b><p><strong>Depois das 6 semanas</strong><span>Natal, Réveillon e Carnaval.</span></p></div>
-      <div><b class="n">15</b><p><strong>Folhas de acompanhamento</strong><span>Para imprimir ou preencher no celular.</span></p></div>
-      <div><b class="n">17</b><p><strong>Treino na TV e downloads</strong><span>Treino animado com cronômetro, 23 cartões para o celular e links de vídeos de técnica.</span></p></div>
+    <div class="grp">
+      <div><b>Ponto de partida</b><p><i>Dá tempo?</i><i>Antes de começar</i><i>Comece aqui</i><i>Seus números</i></p></div>
+      <div><b>Comida</b><p><i>O prato</i><i>Três dias-exemplo</i></p></div>
+      <div><b>Treino</b><p><i>Como o treino funciona</i><i>Planos A, B e C</i><i>Cardio e passos</i><i>As 6 semanas</i></p></div>
+      <div><b>No dia a dia</b><p><i>Mitos e erros comuns</i><i>Sinais de alerta</i><i>Depois das 6 semanas</i><i>Folhas de acompanhamento</i><i>Treino na TV e downloads</i></p></div>
     </div>
   </div>
 </section>
