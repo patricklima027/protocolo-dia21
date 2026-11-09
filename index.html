@@ -262,6 +262,21 @@ footer .leg{max-width:760px}
 .rel p{margin:0 0 6px;font-size:15px;color:#E4E6EA}
 .rel .tm{font:800 38px/1 var(--cond);letter-spacing:.04em;color:var(--sol);font-variant-numeric:tabular-nums}
 .rel small{display:block;margin-top:6px;color:#9da0a8;font-size:12.5px}
+.cx .rel{background:var(--sol-s);border-color:var(--sol);color:var(--t1);margin:6px 0 12px;max-width:none}
+.cx .rel p{color:var(--t1);font-weight:600}
+.cx .rel small{color:var(--t2)}
+@keyframes alerta{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,90,31,.8),0 8px 24px -8px rgba(255,90,31,.7);filter:brightness(1)}50%{transform:scale(1.035);box-shadow:0 0 0 16px rgba(255,90,31,0),0 8px 24px -8px rgba(255,90,31,.7);filter:brightness(1.16)}}
+@keyframes pisca{0%,100%{opacity:1}50%{opacity:.45}}
+.cta.alerta{animation:alerta 1.05s ease-in-out infinite}
+.rs-of{border:2px solid var(--sol);border-radius:16px;padding:20px 18px;margin-bottom:14px;text-align:center;background:linear-gradient(180deg,#2a1710,var(--g2))}
+.rs-of .k{font:700 13px var(--cond);letter-spacing:.24em;text-transform:uppercase;color:#fff;display:block;margin-bottom:8px}
+.rs-of .k i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--sol);margin-right:8px;animation:pisca .9s ease-in-out infinite}
+.rs-of-t{font:800 clamp(34px,9.5vw,50px)/1 var(--cond);text-transform:uppercase;color:var(--sol);animation:pisca 1.3s ease-in-out infinite}
+.rs-of-p{font:800 74px/1 var(--cond);color:#fff;margin:12px 0 4px}
+.rs-of-p small{font-size:32px;vertical-align:top;margin-right:4px}
+.rs .rs-of p{margin:0 0 12px;color:#E3E4E7}
+.rs-of .rel{margin:0 auto}
+@media(prefers-reduced-motion:reduce){.cta.alerta,.rs-of-t,.rs-of .k i{animation:none}}
 .rotas-n{max-width:560px;margin:10px auto 0;font-size:13.5px;color:#9da0a8;text-align:center}
 @media(prefers-reduced-motion:reduce){.qz-bar i{transition:none}html{scroll-behavior:auto}}
 </style>
@@ -281,7 +296,6 @@ footer .leg{max-width:760px}
     </div>
     <div class="h-img">
       <div class="modelo"><img src="modelo.webp" alt="Atleta fictício, gerado por IA, treinando com halteres" width="900" height="900" fetchpriority="high"></div>
-      <div class="ia">Imagem gerada por inteligência artificial. Não é um aluno nem um resultado.</div>
     </div>
     <div class="h-body">
       <p class="lead">O protocolo de 6 semanas cabe no tempo que resta, se você largar na segunda. Responda perguntas rápidas (peso, altura, rotina e o que gosta de comer) e veja o treino, a proteína e o cardápio-exemplo que combinam com você.</p>
@@ -291,20 +305,6 @@ footer .leg{max-width:760px}
     </div>
   </div>
 </header>
-
-<section id="conta">
-  <div class="wrap">
-    <span class="kick">A conta do relógio</span>
-    <h2>A matemática que <span class="sol">ninguém te mostra</span></h2>
-    <p class="lead">O verão começa em <strong>21 de dezembro</strong>. Entre hoje e lá existe um número fixo de segundas-feiras para largar. O manual mostra o que cabe nesse prazo e, principalmente, o que <strong>não</strong> cabe.</p>
-    <div class="stats">
-      <div class="stat"><span class="v" data-dias>48</span><span class="l">dias até o início do verão</span></div>
-      <div class="stat"><span class="v" data-segundas>6</span><span class="l">segundas-feiras para largar</span></div>
-      <div class="stat"><span class="v">0,5–1%</span><span class="l">do peso por semana: o ritmo que a literatura considera moderado para quem quer preservar músculo</span></div>
-    </div>
-    <p class="nota">Isso é um <strong>teto de ritmo moderado</strong>, não uma meta nem uma previsão. Cada corpo responde de um jeito, e perder mais rápido não é melhor: em um estudo com atletas de elite, o grupo que perdeu peso mais devagar <strong>ganhou massa magra</strong>, e o mais rápido, não (Garthe et al., 2011).</p>
-  </div>
-</section>
 
 <section class="areia">
   <div class="wrap">
@@ -328,19 +328,6 @@ footer .leg{max-width:760px}
       <div><b>Comida</b><p><i>O prato</i><i>Três dias-exemplo</i></p></div>
       <div><b>Treino</b><p><i>Como o treino funciona</i><i>Planos A, B e C</i><i>Cardio e passos</i><i>As 6 semanas</i></p></div>
       <div><b>No dia a dia</b><p><i>Mitos e erros comuns</i><i>Sinais de alerta</i><i>Depois das 6 semanas</i><i>Folhas de acompanhamento</i><i>Treino na TV e downloads</i></p></div>
-    </div>
-  </div>
-</section>
-
-<section class="escuro">
-  <div class="wrap">
-    <span class="kick">Como são as 6 semanas</span>
-    <h2>O que muda em <span class="sol">cada semana</span></h2>
-    <div class="linha">
-      <div class="sem"><div class="s">1</div><div><strong>Calibrar</strong><span>Achar suas cargas, medir o ponto de partida e fechar a rotina de refeições.</span></div></div>
-      <div class="sem"><div class="s">2–3</div><div><strong>Construir</strong><span>Volume completo, esforço moderado. Primeira leitura dos seus dados.</span></div></div>
-      <div class="sem"><div class="s">4</div><div><strong>Respirar</strong><span>Recuperação ativa para chegar bem às semanas finais.</span></div></div>
-      <div class="sem"><div class="s">5–6</div><div><strong>Apertar</strong><span>Esforço maior e reta final planejada, sem manobras perigosas.</span></div></div>
     </div>
   </div>
 </section>
@@ -397,7 +384,6 @@ footer .leg{max-width:760px}
 <section class="oferta" id="oferta">
   <div class="sun"></div>
   <div class="wrap" style="position:relative">
-    <div class="rel" id="rel" hidden></div>
     <div class="cx">
       <div class="topo">Protocolo Dia 21 · PDF</div>
       <h3>Manual completo de 6 semanas</h3>
@@ -411,9 +397,10 @@ footer .leg{max-width:760px}
         <li>Bônus: planilha de acompanhamento<small>Calcula médias, ritmo semanal e proteína do dia sozinha</small></li>
       </ul>
       <span class="lote" id="lote">Preço de lançamento</span>
+      <div class="rel" id="rel" hidden></div>
       <div class="preco"><div class="v"><small>R$</small><span id="preco">67,99</span></div><div class="t">pagamento único<br><b>acesso vitalício</b> · Pix ou cartão</div></div>
-      <a class="cta grande" id="cta-final" href="#" data-ev="InitiateCheckout">Eu ainda quero mudar de vida!</a>
-      <p class="cta-sub">Protocolo Dia 21 · R$ 67,99 · acesso vitalício</p>
+      <a class="cta grande alerta" id="cta-final" href="#" data-ev="InitiateCheckout">Eu ainda quero mudar de vida!</a>
+      <p class="cta-sub">Dá <b>R$ 1,62 por dia</b> nas 6 semanas · acesso vitalício</p>
       <div class="gar"><span>🛡️</span><div><b>7 dias de garantia.</b> Se não for o que você esperava, devolvemos 100% do valor, sem perguntas.</div></div>
     </div>
   </div>
@@ -491,28 +478,24 @@ document.getElementById("cta-final").href = checkoutUrl();
 function ev(n,custom){if(window.fbq){custom?fbq("trackCustom",n):fbq("track",n);}}
 document.querySelectorAll("[data-ev]").forEach(function(a){a.addEventListener("click",function(){ev(a.getAttribute("data-ev")==="InitiateCheckout"?"InitiateCheckout":"ViewContent");});});
 
-/* ---- rotas: quantas semanas cabem largando em cada segunda (tabela do capítulo 10 do manual) ---- */
-function montarRotas(){
-  if(dias(VERAO)<=0)return;
-  var st=proxSegunda(),h="",i=0,hj=hoje().getTime();
-  while(i<5){var w=Math.floor(Math.round((VERAO-st)/864e5)/7);if(w<3)break;
-    var lbl=w>=6?"6 semanas completas":w+" semanas (o manual diz quais pular)";
-    h+='<div class="rota'+(i===0?' top':'')+'"><b>'+fmtD(st)+'</b><span>'+lbl+'</span>'+(i===0?'<em>'+(st.getTime()===hj?'Hoje · ':'')+'melhor opção</em>':'')+'</div>';
-    st=new Date(st.getFullYear(),st.getMonth(),st.getDate()+7);i++;}
-  if(!h){h='<div class="rota top"><span>Faltam poucas semanas. O manual traz a reta final planejada e o ciclo até o Carnaval.</span></div>';}
-  var rt=document.getElementById("rel");
-  if(rt&&h.indexOf("rota top")>-1&&dias(VERAO)>0){
-    var primeira=proxSegunda(),ehHoje=primeira.getTime()===hj,fim=ehHoje?new Date(primeira.getFullYear(),primeira.getMonth(),primeira.getDate()+1):primeira;
-    var wk=Math.floor(Math.round((VERAO-primeira)/864e5)/7);
-    rt.hidden=false;
-    rt.innerHTML='<p>'+(ehHoje?'Hoje é segunda: largando agora, as '+Math.min(6,wk)+' semanas cabem. Essa largada fecha à meia-noite.':'Próxima largada: segunda, '+fmtD(primeira)+' ('+Math.min(6,wk)+' semanas). Faltam:')+'</p><div class="tm" id="rel-tm" aria-hidden="true"></div><small>Contagem real até a próxima segunda-feira. Depois dela, o plano passa a ter uma semana a menos antes do verão.</small>';
-    var tmEl=document.getElementById("rel-tm");
-    (function tick(){var ms=fim-new Date();if(ms<=0){montarRotas();return;}
-      var s=Math.floor(ms/1000),d=Math.floor(s/86400),hh=Math.floor(s%86400/3600),mm=Math.floor(s%3600/60),ss=s%60,z=function(n){return ("0"+n).slice(-2);};
-      tmEl.textContent=(d>0?d+"d ":"")+z(hh)+":"+z(mm)+":"+z(ss);setTimeout(tick,1000);})();
-  }
+/* ---- relógio REAL da largada: conta até o fim da próxima segunda-feira (tabela do capítulo 10 do manual) ---- */
+function largada(){
+  if(dias(VERAO)<=0)return null;
+  var p=proxSegunda(),eh=p.getTime()===hoje().getTime(),wk=Math.min(6,Math.floor(Math.round((VERAO-p)/864e5)/7));
+  if(wk<3)return null;
+  return {fim:new Date(p.getFullYear(),p.getMonth(),p.getDate()+1),
+          txt:(eh?'Hoje é segunda. Para largar hoje com as '+wk+' semanas, faltam':'Para largar na segunda ('+fmtD(p)+') com as '+wk+' semanas, faltam')};
 }
-montarRotas();
+function relogio(el){
+  if(!el)return;var L=largada();if(!L){el.hidden=true;return;}
+  el.hidden=false;
+  el.innerHTML='<p>'+L.txt+'</p><div class="tm" aria-hidden="true"></div><small>Contagem real: depois dela, o plano tem uma semana a menos antes do verão.</small>';
+  var tm=el.querySelector(".tm");
+  (function tick(){if(!el.isConnected)return;var ms=L.fim-new Date();if(ms<=0){relogio(el);return;}
+    var s=Math.floor(ms/1000),d=Math.floor(s/86400),hh=Math.floor(s%86400/3600),mm=Math.floor(s%3600/60),ss=s%60,z=function(n){return ("0"+n).slice(-2);};
+    tm.textContent=(d>0?d+"d ":"")+z(hh)+":"+z(mm)+":"+z(ss);setTimeout(tick,1000);})();
+}
+relogio(document.getElementById("rel"));
 
 /* ---- quiz ---- */
 var Q=[
@@ -527,7 +510,7 @@ var Q=[
  {id:"altura",tipo:"num",t:"Qual é a sua altura?",un:"cm",min:130,max:220,ph:"170"},
  {id:"exp",tipo:"uma",t:"E o seu histórico com treino?",op:[["nunca","Nunca treinei ou estou voltando agora","Parado há bastante tempo"],["menos1","Treino há menos de 1 ano"],["mais1","Treino há mais de 1 ano"]]},
  {id:"local",tipo:"uma",t:"Onde você vai treinar?",op:[["academia","Na academia"],["casa","Em casa","Halteres ou mochila, e uma cadeira"]]},
- {id:"dias",tipo:"uma",t:"Quantos dias por semana você consegue treinar?",sub:"Seja realista: um plano que você cumpre vale mais que um melhor que você abandona.",op:[["3","3 dias"],["4","4 dias"]]},
+ {id:"dias",tipo:"uma",t:"Quantos dias por semana você consegue treinar?",sub:"Seja realista: um plano que você cumpre vale mais que um melhor que você abandona.",op:[["3","3 dias"],["4","4 ou mais"]]},
  {id:"tempo",tipo:"uma",t:"Quanto tempo você tem por treino?",op:[["45","Até 45 minutos"],["60","De 45 a 70 minutos"],["80","Mais de 70 minutos"]]},
  {id:"prot",tipo:"multi",t:"Quais proteínas você gosta de comer?",sub:"Marque quantas quiser.",op:[["frango","🍗 Frango"],["carne","🥩 Carne bovina"],["peixe","🐟 Peixe"],["ovos","🥚 Ovos"],["feijao","🫘 Feijão e lentilha"]]},
  {id:"carb",tipo:"multi",t:"E de carboidrato?",sub:"Marque quantos quiser.",op:[["arroz","🍚 Arroz"],["mandioca","🍠 Mandioca e batata"],["pao","🍞 Pão"]]}
@@ -623,7 +606,7 @@ function planoTreino(s){
     if(curto)ct="Com até 45 minutos, o Plano A tem versões curtas e pode servir melhor. O manual explica.";
     return {nome:"Plano B · 4 dias",img:"c-treino-b.jpg",txt:"Superior e inferior, 2 vezes cada: dois dias mais pesados e dois com mais repetições por série.",nota:"",ct:ct};
   }
-  if(s.dias==="4")nota="Você tem 4 dias, mas o Plano B (superior e inferior) é para quem já treina e se recupera bem. Começar pelo Plano A é o mais seguro, e o B fica no manual para quando você estiver pronto.";
+  if(s.dias==="4")nota="Você tem 4 dias ou mais, mas o Plano B (superior e inferior) é para quem já treina e se recupera bem. Começar pelo Plano A é o mais seguro, e o B fica no manual para quando você estiver pronto.";
   if(curto)ct="Com até 45 minutos, use as versões curtas A45 e B45, com exercícios em pares.";
   else if(s.tempo==="60")ct="O Plano A leva de 65 a 80 minutos. Nos dias apertados, use as versões de 45 minutos.";
   return {nome:"Plano A · 3 dias",img:"c-treino-a.jpg",txt:"Corpo inteiro, com os treinos A e B alternados, 3 vezes por semana. É a escolha do manual para quem está começando ou voltando.",nota:nota,ct:ct};
@@ -661,9 +644,10 @@ function resultado(){
   +'<div class="bloco"><span class="k">Sua proteína</span><span class="big">≈ '+pg+'<small>g por dia</small></span><p>Ponto de partida do manual: <b>2,0 g por kg</b>, dentro da faixa de 1,6 a 2,4 g/kg descrita em revisões de especialistas (Hector &amp; Phillips, 2018; Morton et al., 2018). Para você: de <b>'+lo+' a '+hi+' g</b> por dia, em 4 refeições de cerca de <b>'+porRef+' g</b>.</p><p class="peq">Ponto de partida, não regra individual. O manual explica como ajustar e quanto de cada alimento rende 30 g de proteína.</p></div>'
   +kc+cx
   +'<div class="bloco"><span class="k">E mais o que está no pacote</span><ul class="inc"><li>Manual em PDF, com a fonte de cada afirmação (98 referências)</li><li>Treino na TV, com exercícios animados e cronômetro de descanso</li><li>23 cartões para guardar no celular</li><li>Planilha que calcula média do peso, ritmo e proteína sozinha</li><li>Regras de decisão para toda segunda-feira</li></ul><p class="peq">Pagamento único de R$ '+PRECO+' · acesso vitalício · 7 dias de garantia.</p></div>'
+  +'<div class="rs-of"><span class="k"><i></i>A decisão é sua</span><div class="rs-of-t">Eu ainda quero mudar de vida</div><div class="rs-of-p"><small>R$</small>'+PRECO+'</div><p>Dá <b>R$ 1,62 por dia</b> nas 6 semanas · pagamento único · acesso vitalício · 7 dias de garantia</p><div class="rel" id="rel2" hidden></div></div>'
   +'<p class="peq" style="margin-bottom:12px">Material educativo, baseado em fontes públicas. Não foi elaborado nem assinado por nutricionista ou profissional de Educação Física e não os substitui. Resultados variam de pessoa para pessoa; nada aqui é garantia de resultado. Suas respostas ficaram só neste aparelho.</p>'
-  +'<div class="rs-cta"><a class="cta grande" id="qbuy" href="'+checkoutUrl()+'" data-ev="InitiateCheckout">Eu ainda quero mudar de vida!</a><p class="rs-preco">Protocolo Dia 21 · R$ '+PRECO+' · acesso vitalício</p><a class="link" href="#oferta" id="qver">Ver tudo o que está incluso</a></div></div>';
-  BODY.innerHTML=h;BODY.scrollTop=0;
+  +'<div class="rs-cta"><a class="cta grande alerta" id="qbuy" href="'+checkoutUrl()+'" data-ev="InitiateCheckout">Eu ainda quero mudar de vida!</a><p class="rs-preco">Protocolo Dia 21 · R$ '+PRECO+' · acesso vitalício</p><a class="link" href="#oferta" id="qver">Ver tudo o que está incluso</a></div></div>';
+  BODY.innerHTML=h;BODY.scrollTop=0;relogio(document.getElementById("rel2"));
   document.getElementById("qbuy").addEventListener("click",function(){ev("InitiateCheckout");});
   document.getElementById("qver").addEventListener("click",function(e){e.preventDefault();fechar();document.getElementById("oferta").scrollIntoView();});
 }
