@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Treino na TV · Protocolo Dia 21</title>
+<style>
+:root{--g:#101114;--g2:#1B1D22;--g3:#2A2D34;--sol:#FF5A1F;--mare:#0F6E78;--areia:#F6F0E6;--t:#F4F1EA;--t2:#B9BBC1;--ok:#1E7B4C}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--g);color:var(--t);font-family:"Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer;border:0}
+#app{min-height:100%;display:flex;flex-direction:column}
+.cond{font-family:"Avenir Next Condensed","Arial Narrow",Arial,sans-serif}
+/* menu */
+.menu-w{max-width:1180px;width:100%;margin:0 auto;padding:4vh 4vw 6vh}
+.logo{display:flex;align-items:baseline;gap:14px;margin-bottom:.6vh}
+.logo b{font:800 clamp(34px,5.2vw,66px)/1 "Avenir Next Condensed","Arial Narrow",Arial,sans-serif;text-transform:uppercase;letter-spacing:-.01em}
+.logo span{color:var(--sol);font:800 clamp(14px,1.6vw,22px) "Avenir Next Condensed",Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase}
+.sub{color:var(--t2);font-size:clamp(15px,1.7vw,24px);margin:0 0 3vh}
+h2.s{font:800 clamp(14px,1.4vw,20px) "Avenir Next Condensed",Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--sol);margin:3vh 0 1.2vh}
+.sem{display:flex;gap:1.2vw;flex-wrap:wrap}
+.sem button{background:var(--g2);border:2px solid var(--g3);border-radius:14px;padding:1.2vh 1.6vw;min-width:7vw;font-size:clamp(16px,1.9vw,28px);font-weight:700;text-align:center}
+.sem button small{display:block;font-weight:500;font-size:.55em;color:var(--t2);margin-top:2px}
+.sem button.on{background:var(--sol);border-color:var(--sol);color:#fff}.sem button.on small{color:#FFE3D5}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.4vw}
+.card{background:var(--g2);border:2px solid var(--g3);border-radius:16px;padding:2vh 1.4vw;text-align:left}
+.card:hover,.card:focus-visible,.sem button:hover,.sem button:focus-visible{border-color:var(--sol);outline:none}
+.card b{display:block;font:800 clamp(20px,2.3vw,32px)/1.1 "Avenir Next Condensed","Arial Narrow",Arial,sans-serif;text-transform:uppercase}
+.card span{display:block;color:var(--t2);font-size:clamp(13px,1.3vw,18px);margin-top:.6vh}
+.card em{display:block;font-style:normal;color:var(--sol);font-weight:700;margin-top:1vh;font-size:clamp(13px,1.4vw,19px)}
+.opt{display:flex;align-items:center;gap:12px;margin-top:3vh;color:var(--t2);font-size:clamp(14px,1.5vw,21px)}
+.opt input{width:1.5em;height:1.5em;accent-color:var(--sol)}
+.dica-box{background:var(--g2);border-left:6px solid var(--mare);border-radius:10px;padding:1.6vh 1.6vw;margin-top:3vh;color:var(--t2);font-size:clamp(13px,1.4vw,19px);line-height:1.5}
+.dica-box b{color:var(--t)}
+/* treino */
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:2vh 3vw 0;font-size:clamp(14px,1.6vw,22px);color:var(--t2)}
+.chip{background:var(--g2);border:2px solid var(--g3);border-radius:99px;padding:.5vh 1.2vw;font-weight:700;color:var(--t)}
+.top .menu{background:transparent;color:var(--t2);font-size:inherit;padding:.5vh 1vw;border:2px solid var(--g3);border-radius:99px}
+.main{flex:1;display:grid;grid-template-columns:1.05fr 1fr;gap:3vw;align-items:center;padding:1vh 3vw}
+.figcard{background:var(--areia);border-radius:26px;padding:2.4vh 2vw;display:flex;align-items:center;justify-content:center;min-height:42vh}
+.figcard svg{width:100%;height:auto;max-height:58vh;display:block}
+.info .n{font:800 clamp(34px,5vw,72px)/1 "Avenir Next Condensed",Arial,sans-serif;color:var(--sol)}
+.info h1{font:800 clamp(34px,5.6vw,84px)/1 "Avenir Next Condensed","Arial Narrow",Arial,sans-serif;text-transform:uppercase;margin:.4vh 0 1vh;letter-spacing:-.005em}
+.info .alt{color:var(--t2);font-size:clamp(15px,1.8vw,26px);margin:0 0 2.2vh}
+.chips{display:flex;flex-wrap:wrap;gap:1vw;margin-bottom:2.2vh}
+.chips span{background:var(--g2);border:2px solid var(--g3);border-radius:14px;padding:1vh 1.3vw;font-size:clamp(16px,2vw,30px);font-weight:700}
+.chips .big{background:var(--sol);border-color:var(--sol);color:#fff}
+.chips .rir{background:var(--mare);border-color:var(--mare);color:#fff}
+.info .dica{font-size:clamp(16px,2vw,29px);line-height:1.35;margin:0 0 1.4vh}
+.info .video{display:inline-block;color:#9FD6DC;font-size:clamp(13px,1.5vw,21px);margin:0 1vw .6vh 0}
+.info .par{display:inline-block;background:#3A2415;color:#FFB48C;border-radius:10px;padding:.8vh 1.2vw;font-size:clamp(13px,1.5vw,21px);font-weight:700;margin-top:1vh}
+.bar{display:flex;gap:6px;padding:0 3vw 1.4vh}
+.bar i{flex:1;height:10px;border-radius:5px;background:var(--g3)}.bar i.f{background:var(--sol)}.bar i.a{background:#fff}
+.btns{display:flex;gap:1.6vw;padding:0 3vw 3vh}
+.btns button{background:var(--g2);border:2px solid var(--g3);border-radius:18px;padding:2vh 2vw;font-size:clamp(16px,2vw,30px);font-weight:700;flex:0 0 auto}
+.btns .primario{flex:1;background:var(--sol);border-color:var(--sol);color:#fff;font-size:clamp(20px,2.8vw,42px)}
+.btns button:hover,.btns button:focus-visible{border-color:#fff;outline:none}
+.hint{padding:0 3vw 2vh;color:#6F727A;font-size:clamp(11px,1.1vw,15px);text-align:center}
+/* descanso */
+.rest{position:fixed;inset:0;background:rgba(16,17,20,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:5;padding:3vh 4vw}
+.rest .lab{font:800 clamp(16px,2vw,28px) "Avenir Next Condensed",Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--sol)}
+.ring{position:relative;width:min(46vh,40vw);height:min(46vh,40vw);margin:2vh 0}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring .t{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:800 min(15vh,13vw) "Avenir Next Condensed",Arial,sans-serif;font-variant-numeric:tabular-nums}
+.rest .prox{color:var(--t2);font-size:clamp(15px,1.9vw,28px)}
+.rest .prox b{display:block;color:var(--t);font:800 clamp(26px,4vw,56px)/1.1 "Avenir Next Condensed",Arial,sans-serif;text-transform:uppercase;margin-top:.6vh}
+.rest .btns{padding:3vh 0 0;justify-content:center}
+.rest .btns .primario{flex:0 1 auto}
+.fim{margin:auto;text-align:center;padding:6vh 4vw;max-width:900px}
+.fim h1{font:800 clamp(40px,7vw,100px)/1 "Avenir Next Condensed",Arial,sans-serif;text-transform:uppercase;margin:0 0 2vh}
+.fim p{font-size:clamp(16px,2vw,28px);color:var(--t2);line-height:1.45}
+.fim .btns{justify-content:center;padding-top:4vh}
+@media (max-aspect-ratio:1/1){.main{grid-template-columns:1fr;gap:2vh}.figcard{min-height:30vh}.figcard svg{max-height:34vh}.info h1{font-size:clamp(30px,9vw,60px)}.chips span{font-size:clamp(14px,4vw,24px)}.btns{flex-wrap:wrap}.btns .primario{flex:1 1 100%;order:-1}.ring{width:min(60vw,36vh);height:min(60vw,36vh)}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>/* Motor de figuras do Protocolo Dia 21 — bonecos de exercício em vista lateral (e frontal).
+   Uma única fonte para: figuras do PDF, cartões PNG e animação do "Treino na TV".
+   Convenções: x → direita, y ↓; ângulos em graus a partir da vertical para cima, sentido horário
+   (0 = cima, 90 = direita/frente, 180 = baixo, 270 = esquerda/trás). O boneco olha para a direita. */
+(function (root) {
+  var COR = { g: '#17181B', cinza: '#A9ADB5', sol: '#FF5A1F', eq: '#5B6270', placa: '#0F6E78', banco: '#DDD3C1', chao: '#D2CAB8' };
+  var L = { coxa: 42, canela: 42, pe: 15, tronco: 54, pescoco: 5, cabeca: 8.5, braco: 30, antebraco: 28 };
+
+  function dir(a) { var r = a * Math.PI / 180; return [Math.sin(r), -Math.cos(r)]; }
+  function add(p, d, l) { return [p[0] + d[0] * l, p[1] + d[1] * l]; }
+  function ik(p0, p2, l1, l2, lado) {                       // articulação (joelho/cotovelo) entre dois pontos
+    var dx = p2[0] - p0[0], dy = p2[1] - p0[1], dist = Math.hypot(dx, dy) || 1e-6;
+    var d = Math.max(Math.abs(l1 - l2) + 0.01, Math.min(dist, l1 + l2 - 0.01));
+    var a = (l1 * l1 - l2 * l2 + d * d) / (2 * d), h = Math.sqrt(Math.max(0, l1 * l1 - a * a));
+    var ux = dx / dist, uy = dy / dist, px = p0[0] + ux * a, py = p0[1] + uy * a;
+    return [px + (-uy) * lado * h, py + ux * lado * h];
+  }
+
+  /* pose: {H:[x,y] quadril | S:[x,y] ombro,  A:[x,y] tornozelo,  tr:ângulo do tronco,  cb:ângulo da cabeça,
+            W:[x,y] punho (IK) ou ua/fa (ângulos), cot:+1/-1 lado do cotovelo, A2:[x,y] tornozelo de trás,
+            pe:ângulo do pé, hl:[segmentos destacados], W2:[x,y] punho do braço de apoio} */
+  function esqueleto(P) {
+    var H = P.H, S = P.S;
+    if (!H) H = add(S, dir(P.tr), -L.tronco);               // quadril a partir do ombro
+    if (!S) S = add(H, dir(P.tr), L.tronco);
+    var A = P.A, K = ik(H, A, L.coxa, L.canela, P.jo == null ? -1 : P.jo);
+    var T = add(A, dir(P.pe == null ? 90 : P.pe), L.pe);
+    var N = add(S, dir(P.cb == null ? P.tr : P.cb), L.pescoco), Cb = add(N, dir(P.cb == null ? P.tr : P.cb), L.cabeca);
+    var E, W;
+    if (P.W) { W = P.W; E = ik(S, W, L.braco, L.antebraco, P.cot == null ? 1 : P.cot); }
+    else { E = add(S, dir(P.ua == null ? 180 : P.ua), L.braco); W = add(E, dir(P.fa == null ? 180 : P.fa), L.antebraco); }
+    var sk = { H: H, S: S, A: A, K: K, T: T, N: N, C: Cb, E: E, W: W };
+    if (P.A2) { sk.A2 = P.A2; sk.K2 = ik(H, P.A2, L.coxa, L.canela, P.jo == null ? -1 : P.jo); sk.T2 = add(P.A2, dir(P.pe2 == null ? 90 : P.pe2), L.pe); }
+    if (P.W2) { sk.W2 = P.W2; sk.E2 = ik(S, P.W2, L.braco, L.antebraco, P.cot2 == null ? 1 : P.cot2); }
+    return sk;
+  }
+
+  function seg(p, q, w, cor) { return '<line x1="' + p[0].toFixed(1) + '" y1="' + p[1].toFixed(1) + '" x2="' + q[0].toFixed(1) + '" y2="' + q[1].toFixed(1) + '" stroke="' + cor + '" stroke-width="' + w + '" stroke-linecap="round"/>'; }
+  function circ(c, r, cor, ex) { return '<circle cx="' + c[0].toFixed(1) + '" cy="' + c[1].toFixed(1) + '" r="' + r + '" fill="' + cor + '" ' + (ex || '') + '/>'; }
+
+  function desenho(P, sk, props) {
+    var hl = P.hl || [], cor = function (n, base) { return hl.indexOf(n) >= 0 ? COR.sol : base; };
+    var s = '';
+    if (props && props.antes) s += props.antes;
+    if (sk.A2) s += seg(sk.H, sk.K2, 8, COR.cinza) + seg(sk.K2, sk.A2, 7, COR.cinza) + seg(sk.A2, sk.T2, 6, COR.cinza);
+    if (sk.W2) s += seg(sk.S, sk.E2, 6, COR.cinza) + seg(sk.E2, sk.W2, 5.5, COR.cinza);
+    s += seg(sk.A, sk.T, 6, COR.g);
+    s += seg(sk.K, sk.A, 7.5, cor('canela', COR.g)) + seg(sk.H, sk.K, 9, cor('coxa', COR.g));
+    s += seg(sk.H, sk.S, 13, cor('tronco', COR.g));
+    s += seg(sk.S, sk.E, 6.5, cor('braco', COR.g)) + seg(sk.E, sk.W, 5.8, cor('antebraco', COR.g));
+    s += seg(sk.S, sk.N, 5, COR.g) + circ(sk.C, 8.5, COR.g);
+    if (props && props.depois) s += props.depois;
+    return s;
+  }
+
+  function placa(c, r) { return circ(c, r, COR.placa) + circ(c, r * 0.35, '#fff', 'opacity=".9"'); }
+  function banco(x1, y1, x2, y2, chao) {                      // assento do banco com pés
+    return '<rect x="' + Math.min(x1, x2) + '" y="' + Math.min(y1, y2) + '" width="' + Math.abs(x2 - x1) + '" height="6" rx="2" fill="' + COR.banco + '"/>' +
+      seg([x1 + 6, y1 + 6], [x1 + 6, chao], 3, COR.banco) + seg([x2 - 6, y1 + 6], [x2 - 6, chao], 3, COR.banco);
+  }
+  function linhaFina(p, q, cor, w, dash) { return '<line x1="' + p[0].toFixed(1) + '" y1="' + p[1].toFixed(1) + '" x2="' + q[0].toFixed(1) + '" y2="' + q[1].toFixed(1) + '" stroke="' + cor + '" stroke-width="' + (w || 1.6) + '" stroke-linecap="round" ' + (dash ? 'stroke-dasharray="3 3"' : '') + '/>'; }
+
+  /* --------- exercícios: {nome, mus (músculos), a, b (poses), rot:[início, fim], props(sk,fase)} --------- */
+  var EX = {};
+  var ST = { x0: 0 };                                          // tornozelo em (0,0): o chão fica em y≈+4
+
+  EX.agachamento = {
+    nome: 'Agachamento', mus: 'coxas e glúteos', rot: ['Em pé', 'Desça e suba'],
+    a: { A: [0, 0], H: [-2, -84], tr: 3, cb: 3, ua: 215, fa: 325, hl: ['coxa'] },
+    b: { A: [0, 0], H: [-22, -50], tr: 42, cb: 30, ua: 225, fa: 335, hl: ['coxa'] },
+    props: function (sk) { return { depois: placa([sk.S[0] - 5, sk.S[1] - 3], 9) }; }
+  };
+  EX.goblet = {
+    nome: 'Agachamento goblet', mus: 'coxas e glúteos', rot: ['Em pé', 'Desça e suba'],
+    a: { A: [0, 0], H: [-2, -84], tr: 2, cb: 2, W: [20, -92], cot: -1, hl: ['coxa'] },
+    b: { A: [0, 0], H: [-20, -52], tr: 22, cb: 12, W: [26, -84], cot: -1, hl: ['coxa'] },
+    props: function (sk) { return { depois: placa(sk.W, 7) }; }
+  };
+  EX.stiff = {
+    nome: 'Stiff (terra romeno)', mus: 'posteriores de coxa e glúteos', rot: ['Em pé', 'Quadril para trás'],
+    a: { A: [0, 0], H: [-2, -84], tr: 2, cb: 2, ua: 185, fa: 180, hl: ['coxa', 'tronco'] },
+    b: { A: [0, 0], H: [-20, -74], tr: 78, cb: 70, ua: 182, fa: 180, hl: ['coxa', 'tronco'] },
+    props: function (sk) { return { depois: placa(sk.W, 9) }; }
+  };
+  EX.supino = {
+    nome: 'Supino reto', mus: 'peito, ombros e tríceps', rot: ['Barra no peito', 'Empurre para cima'],
+    a: { A: [42, 0], H: [4, -50], tr: 270, cb: 270, ua: 168, fa: 4, A2: null, hl: ['braco', 'antebraco'] },
+    b: { A: [42, 0], H: [4, -50], tr: 270, cb: 270, ua: 2, fa: 0, hl: ['braco', 'antebraco'] },
+    props: function (sk) { return { antes: banco(-70, -46, 16, -46, 4), depois: placa(sk.W, 10) }; }
+  };
+  EX.supino_inclinado = {
+    nome: 'Supino inclinado com halteres', mus: 'parte alta do peito e ombros', rot: ['Halteres no peito', 'Empurre para cima'],
+    a: { A: [42, 0], H: [6, -52], tr: 300, cb: 300, ua: 165, fa: 355, hl: ['braco', 'antebraco'] },
+    b: { A: [42, 0], H: [6, -52], tr: 300, cb: 300, ua: 3, fa: 0, hl: ['braco', 'antebraco'] },
+    props: function (sk) { return { antes: '<polygon points="-62,-70 -12,-44 16,-44 16,-38 -62,-62" fill="' + COR.banco + '"/>' + seg([-34, -50], [-34, 4], 3, COR.banco) + seg([10, -38], [10, 4], 3, COR.banco), depois: placa(sk.W, 7) }; }
+  };
+  EX.remada_curvada = {
+    nome: 'Remada curvada', mus: 'costas e bíceps', rot: ['Braços estendidos', 'Puxe a barra ao abdômen'],
+    a: { A: [0, 0], H: [-26, -76], tr: 72, cb: 60, ua: 182, fa: 180, hl: ['braco', 'antebraco', 'tronco'] },
+    b: { A: [0, 0], H: [-26, -76], tr: 72, cb: 60, ua: 244, fa: 188, hl: ['braco', 'antebraco', 'tronco'] },
+    props: function (sk) { return { depois: placa(sk.W, 9) }; }
+  };
+  EX.remada_unilateral = {
+    nome: 'Remada unilateral', mus: 'costas e bíceps', rot: ['Braço estendido', 'Puxe o halter'],
+    a: { A: [0, 0], H: [-28, -72], tr: 80, cb: 66, ua: 182, fa: 180, W2: [36, -58], cot2: 1, hl: ['braco', 'antebraco', 'tronco'] },
+    b: { A: [0, 0], H: [-28, -72], tr: 80, cb: 66, ua: 246, fa: 190, W2: [36, -58], cot2: 1, hl: ['braco', 'antebraco', 'tronco'] },
+    props: function (sk) { return { antes: '<rect x="30" y="-58" width="34" height="6" rx="2" fill="' + COR.banco + '"/>' + seg([36, -52], [36, 4], 3, COR.banco) + seg([60, -52], [60, 4], 3, COR.banco), depois: placa(sk.W, 7) }; }
+  };
+  EX.desenvolvimento = {
+    nome: 'Desenvolvimento com halteres', mus: 'ombros e tríceps', rot: ['Halteres nos ombros', 'Empurre para cima'],
+    a: { A: [34, 0], H: [0, -50], tr: 356, cb: 356, ua: 178, fa: 6, hl: ['braco', 'antebraco'] },
+    b: { A: [34, 0], H: [0, -50], tr: 356, cb: 356, ua: 3, fa: 0, hl: ['braco', 'antebraco'] },
+    props: function (sk) { return { antes: banco(-14, -44, 20, -44, 4) + '<rect x="-16" y="-110" width="6" height="66" rx="3" fill="' + COR.banco + '"/>', depois: placa(sk.W, 7) }; }
+  };
+  EX.rosca = {
+    nome: 'Rosca direta', mus: 'bíceps', rot: ['Braços estendidos', 'Dobre os cotovelos'],
+    a: { A: [0, 0], H: [-2, -84], tr: 2, cb: 2, ua: 180, fa: 180, hl: ['braco', 'antebraco'] },
+    b: { A: [0, 0], H: [-2, -84], tr: 2, cb: 2, ua: 180, fa: 28, hl: ['braco', 'antebraco'] },
+    props: function (sk) { return { depois: placa(sk.W, 8) }; }
+  };
+  EX.triceps_polia = {
+    nome: 'Tríceps na polia (corda)', mus: 'tríceps', rot: ['Cotovelos dobrados', 'Estenda os cotovelos'],
+    a: { A: [0, 0], H: [-4, -84], tr: 8, cb: 8, ua: 176, fa: 34, hl: ['braco', 'antebraco'] },
+    b: { A: [0, 0], H: [-4, -84], tr: 8, cb: 8, ua: 176, fa: 164, hl: ['braco', 'antebraco'] },
+    props: function (sk) { var topo = [sk.S[0] + 18, sk.S[1] - 96]; return { antes: linhaFina(topo, sk.W, COR.eq, 1.4) + circ(topo, 4, COR.eq), depois: circ(sk.W, 3.5, COR.eq) }; }
+  };
+  EX.elevacao_pelvica = {
+    nome: 'Elevação pélvica', mus: 'glúteos e posteriores', rot: ['Quadril baixo', 'Suba o quadril'],
+    a: { S: [-50, -50], A: [40, 0], tr: 296, cb: 280, ua: 90, fa: 90, W: [-2, -34], hl: ['coxa', 'tronco'] },
+    b: { S: [-50, -50], A: [40, 0], tr: 272, cb: 272, ua: 90, fa: 90, W: [-2, -52], hl: ['coxa', 'tronco'] },
+    props: function (sk) { return { antes: '<rect x="-78" y="-46" width="38" height="6" rx="2" fill="' + COR.banco + '"/>' + seg([-72, -40], [-72, 4], 3, COR.banco) + seg([-46, -40], [-46, 4], 3, COR.banco) }; }
+  };
+  EX.panturrilha = {
+    nome: 'Panturrilha em pé', mus: 'panturrilhas', rot: ['Calcanhar embaixo', 'Suba na ponta dos pés'],
+    a: { A: [0, 0], H: [0, -83], tr: 0, cb: 0, ua: 180, fa: 180, pe: 90, hl: ['canela'] },
+    b: { A: [0, -9], H: [0, -91], tr: 0, cb: 0, ua: 180, fa: 180, pe: 124, hl: ['canela'] },
+    props: function () { return { antes: '<rect x="-14" y="4" width="46" height="8" rx="2" fill="' + COR.banco + '"/>' }; }
+  };
+  EX.prancha = {
+    nome: 'Prancha', mus: 'abdômen e core', rot: ['Corpo em linha reta', 'Segure sem deixar o quadril cair'],
+    a: { S: [-48, -42], A: [64, 0], tr: 267, cb: 270, ua: 180, fa: 90, W: [-30, -4], hl: ['tronco'] },
+    b: { S: [-48, -42], A: [64, 0], tr: 267, cb: 270, ua: 180, fa: 90, W: [-30, -4], hl: ['tronco'] },
+    props: function () { return {}; }
+  };
+
+  EX.leg_press = {
+    nome: 'Leg press 45°', mus: 'coxas e glúteos', rot: ['Joelhos dobrados', 'Empurre a plataforma'],
+    a: { H: [0, -34], tr: 312, cb: 312, A: [36, -66], pe: 318, W: [8, -34], cot: 1, extra: [[78, -118], [-8, 6]], hl: ['coxa'] },
+    b: { H: [0, -34], tr: 312, cb: 312, A: [58, -88], pe: 318, W: [8, -34], cot: 1, extra: [[78, -118], [-8, 6]], hl: ['coxa'] },
+    props: function (sk) {
+      var p = [sk.A[0] + 9, sk.A[1] - 9], d = [0.7, 0.7];
+      var d2 = dir(312);
+      return { antes: seg(add(sk.H, d2, -4), add(sk.H, d2, 62), 11, COR.banco) + seg([-8, -4], [100, -112], 2, COR.chao),
+               depois: seg([p[0] - 26 * d[0], p[1] - 26 * d[1]], [p[0] + 26 * d[0], p[1] + 26 * d[1]], 5, COR.eq) };
+    }
+  };
+  EX.puxada = {
+    nome: 'Puxada na frente', mus: 'costas e bíceps', rot: ['Braços esticados', 'Puxe a barra ao peito'],
+    a: { H: [0, -50], tr: 352, cb: 352, A: [44, -6], W: [8, -152], cot: 1, hl: ['braco', 'antebraco', 'tronco'] },
+    b: { H: [0, -50], tr: 352, cb: 352, A: [44, -6], W: [10, -102], cot: 1, hl: ['braco', 'antebraco', 'tronco'] },
+    props: function (sk) {
+      var topo = [14, -176];
+      return { antes: banco(-14, -44, 20, -44, 4) + '<rect x="14" y="-66" width="34" height="5" rx="2" fill="' + COR.eq + '"/>' + linhaFina(topo, sk.W, COR.eq, 1.4) + circ(topo, 4, COR.eq),
+               depois: seg([sk.W[0] - 1, sk.W[1]], [sk.W[0] + 1, sk.W[1]], 5, COR.placa) };
+    }
+  };
+  EX.face_pull = {
+    nome: 'Face pull', mus: 'ombros e parte alta das costas', rot: ['Braços à frente', 'Puxe a corda ao rosto'],
+    a: { A: [0, 0], H: [-2, -84], tr: 2, cb: 2, ua: 90, fa: 90, hl: ['braco', 'antebraco'] },
+    b: { A: [0, 0], H: [-2, -84], tr: 2, cb: 2, ua: 88, fa: 292, hl: ['braco', 'antebraco'] },
+    props: function (sk) { var polia = [92, sk.S[1]]; return { antes: linhaFina(polia, sk.W, COR.eq, 1.4) + circ(polia, 4, COR.eq) }; }
+  };
+  EX.afundo_bulgaro = {
+    nome: 'Afundo búlgaro', mus: 'coxas e glúteos', rot: ['Em pé', 'Desça e suba'],
+    a: { A: [0, 0], A2: [-62, -46], pe2: 268, H: [-20, -78], tr: 10, cb: 10, ua: 182, fa: 180, hl: ['coxa'] },
+    b: { A: [0, 0], A2: [-62, -46], pe2: 268, H: [-20, -48], tr: 14, cb: 12, ua: 182, fa: 180, hl: ['coxa'] },
+    props: function (sk) { return { antes: '<rect x="-86" y="-42" width="40" height="6" rx="2" fill="' + COR.banco + '"/>' + seg([-80, -36], [-80, 4], 3, COR.banco) + seg([-52, -36], [-52, 4], 3, COR.banco), depois: placa(sk.W, 7) }; }
+  };
+  EX.extensora = {
+    nome: 'Cadeira extensora', mus: 'parte da frente das coxas', rot: ['Joelhos dobrados', 'Estenda os joelhos'],
+    a: { H: [0, -50], tr: 356, cb: 356, A: [42, -8], W: [14, -46], cot: 1, hl: ['coxa', 'canela'] },
+    b: { H: [0, -50], tr: 356, cb: 356, A: [84, -50], pe: 60, W: [14, -46], cot: 1, hl: ['coxa', 'canela'] },
+    props: function (sk) { return { antes: banco(-14, -44, 24, -44, 4) + '<rect x="-16" y="-110" width="6" height="66" rx="3" fill="' + COR.banco + '"/>', depois: circ([sk.A[0] - 4, sk.A[1] - 5], 4, COR.eq) }; }
+  };
+  EX.mesa_flexora = {
+    nome: 'Mesa flexora', mus: 'parte de trás das coxas', rot: ['Pernas estendidas', 'Dobre os joelhos'],
+    a: { H: [4, -56], tr: 270, cb: 270, jo: 1, A: [88, -52], W: [-58, -52], ua: 90, fa: 90, pe: 120, hl: ['coxa', 'canela'] },
+    b: { H: [4, -56], tr: 270, cb: 270, jo: 1, A: [44, -102], W: [-58, -52], ua: 90, fa: 90, pe: 170, hl: ['coxa', 'canela'] },
+    props: function (sk) { return { antes: banco(-74, -50, 40, -50, 4) }; }
+  };
+  EX.triceps_testa = {
+    nome: 'Tríceps testa', mus: 'tríceps', rot: ['Braços estendidos', 'Dobre só os cotovelos'],
+    a: { A: [44, 0], H: [4, -50], tr: 270, cb: 270, ua: 0, fa: 0, hl: ['braco', 'antebraco'] },
+    b: { A: [44, 0], H: [4, -50], tr: 270, cb: 270, ua: 0, fa: 284, hl: ['braco', 'antebraco'] },
+    props: function (sk) { return { antes: banco(-70, -46, 16, -46, 4), depois: placa(sk.W, 7) }; }
+  };
+  EX.flexao = {
+    nome: 'Flexão de braço', mus: 'peito, ombros e tríceps', rot: ['Braços esticados', 'Desça o peito'],
+    a: { S: [-72, -60], tr: 293, cb: 285, A: [56, -6], W: [-72, -2], cot: -1, pe: 100, hl: ['braco', 'antebraco', 'tronco'] },
+    b: { S: [-80, -22], tr: 276, cb: 270, A: [56, -6], W: [-72, -2], cot: -1, pe: 100, hl: ['braco', 'antebraco', 'tronco'] },
+    props: function () { return {}; }
+  };
+  EX.ponte_gluteo = {
+    nome: 'Ponte de glúteo', mus: 'glúteos e posteriores', rot: ['Deitado, quadril no chão', 'Suba o quadril'],
+    a: { S: [-48, -8], tr: 273, cb: 273, A: [36, -2], W: [8, -3], cot: -1, hl: ['coxa', 'tronco'] },
+    b: { S: [-48, -8], tr: 232, cb: 240, A: [36, -2], W: [8, -3], cot: -1, hl: ['coxa', 'tronco'] },
+    props: function () { return {}; }
+  };
+  EX.desenv_em_pe = {
+    nome: 'Desenvolvimento em pé', mus: 'ombros e tríceps', rot: ['Halteres nos ombros', 'Empurre para cima'],
+    a: { A: [0, 0], H: [-2, -84], tr: 2, cb: 2, ua: 176, fa: 6, hl: ['braco', 'antebraco'] },
+    b: { A: [0, 0], H: [-2, -84], tr: 2, cb: 2, ua: 3, fa: 0, hl: ['braco', 'antebraco'] },
+    props: function (sk) { return { depois: placa(sk.W, 7) }; }
+  };
+  EX.remada_baixa = {
+    nome: 'Remada baixa no cabo', mus: 'costas e bíceps', rot: ['Braços à frente', 'Puxe ao abdômen'],
+    a: { H: [0, -50], tr: 4, cb: 4, A: [64, -22], ua: 78, fa: 92, hl: ['braco', 'antebraco', 'tronco'] },
+    b: { H: [0, -50], tr: 354, cb: 354, A: [64, -22], ua: 190, fa: 96, hl: ['braco', 'antebraco', 'tronco'] },
+    props: function (sk) { var f = [112, -56]; return { antes: banco(-18, -44, 22, -44, 4) + linhaFina(f, sk.W, COR.eq, 1.4) + circ(f, 4, COR.eq), depois: circ(sk.W, 3.5, COR.placa) }; }
+  };
+
+  EX.voador = {
+    nome: 'Voador (crucifixo)', mus: 'peito', frontal: true, rot: ['Braços abertos', 'Junte as mãos à frente'],
+    a: { ang: 88, dobra: 14 },
+    b: { ang: 72, dobra: 148 }
+  };
+  EX.abdominal = {
+    nome: 'Abdominal no chão', mus: 'abdômen', rot: ['Deitado, joelhos dobrados', 'Suba só o tronco'],
+    a: { H: [-8, -8], tr: 272, cb: 272, A: [34, -2], ua: 86, fa: 86, hl: ['tronco'] },
+    b: { H: [-8, -8], tr: 306, cb: 312, A: [34, -2], ua: 86, fa: 86, hl: ['tronco'] },
+    props: function () { return {}; }
+  };
+
+  /* vista frontal (elevação lateral) */
+  EX.elevacao_lateral = {
+    nome: 'Elevação lateral', mus: 'ombros', frontal: true, rot: ['Halteres ao lado do corpo', 'Suba até a altura dos ombros'],
+    a: { ang: 6, dobra: 8 },
+    b: { ang: 88, dobra: 10 }
+  };
+  function frontal(P) {
+    var g = COR.g, s = '', sh = [0, -100];
+    s += seg([-8, -50], [-11, 0], 8.5, g) + seg([8, -50], [11, 0], 8.5, g);
+    s += seg([0, -52], sh, 20, g) + circ([0, -118], 9.5, g);
+    [-1, 1].forEach(function (sg) {
+      var o = [sg * 12, -98], a1 = P.ang * Math.PI / 180, a2 = (P.ang - P.dobra) * Math.PI / 180;
+      var E = [o[0] + sg * 30 * Math.sin(a1), o[1] + 30 * Math.cos(a1)];
+      var W = [E[0] + sg * 28 * Math.sin(a2), E[1] + 28 * Math.cos(a2)];
+      s += seg(o, E, 6.5, COR.sol) + seg(E, W, 5.8, COR.sol) + placa(W, 6.5);
+    });
+    return s;
+  }
+
+  /* --------- montagem --------- */
+  function caixa(pts, m) {
+    var x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+    pts.forEach(function (p) { x0 = Math.min(x0, p[0]); y0 = Math.min(y0, p[1]); x1 = Math.max(x1, p[0]); y1 = Math.max(y1, p[1]); });
+    return [x0 - m, y0 - m, x1 - x0 + 2 * m, y1 - y0 + 2 * m];
+  }
+  function pontos(sk) { var o = []; for (var k in sk) o.push(sk[k]); return o; }
+
+  function quadro(ex, P, vb, chao) {
+    if (ex.frontal) {
+      return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + vb.join(' ') + '" class="fq"><line x1="' + vb[0] + '" y1="2" x2="' + (vb[0] + vb[2]) + '" y2="2" stroke="' + COR.chao + '" stroke-width="2"/>' + frontal(P) + '</svg>';
+    }
+    var sk = esqueleto(P), pr = ex.props ? ex.props(sk) : null;
+    var s = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + vb.map(function (v) { return v.toFixed(1); }).join(' ') + '" class="fq">';
+    s += '<line x1="' + (vb[0]) + '" y1="' + chao + '" x2="' + (vb[0] + vb[2]) + '" y2="' + chao + '" stroke="' + COR.chao + '" stroke-width="2"/>';
+    s += desenho(P, sk, pr) + '</svg>';
+    return s;
+  }
+  function viewBox(ex) {
+    if (ex.frontal) return { vb: [-72, -134, 144, 140], chao: 2 };
+    var pts = []; ['a', 'b'].forEach(function (f) { var sk = esqueleto(ex[f]); pts = pts.concat(pontos(sk)); if (ex[f].extra) pts = pts.concat(ex[f].extra); });
+    var bb = caixa(pts, 14);
+    var chao = 4;
+    bb[3] = Math.max(bb[3], chao - bb[1] + 6);
+    var asp = 1.0, h = bb[3], w = bb[2];
+    if (w / h < 0.78) { var nw = h * 0.78; bb[0] -= (nw - w) / 2; bb[2] = nw; }
+    else if (w / h > 1.25) { var nh = w / 1.25; bb[1] -= (nh - h) / 2; bb[3] = nh; }
+    return { vb: bb, chao: chao };
+  }
+  function montar(chave) {
+    var ex = EX[chave]; if (!ex) return '';
+    var v = viewBox(ex);
+    return '<div class="fx2"><div class="fq1">' + quadro(ex, ex.a, v.vb, v.chao) + '<span>' + ex.rot[0] + '</span></div>' +
+           '<div class="seta">→</div><div class="fq1">' + quadro(ex, ex.b, v.vb, v.chao) + '<span>' + ex.rot[1] + '</span></div></div>';
+  }
+  function preencher(raiz) {
+    (raiz || document).querySelectorAll('[data-ex]').forEach(function (el) {
+      el.innerHTML = montar(el.getAttribute('data-ex'));
+    });
+  }
+  function interpolar(ex, t) {                                 // pose intermediária (animação)
+    var a = ex.a, b = ex.b, P = {};
+    for (var k in a) {
+      var va = a[k], vb2 = b[k];
+      if (Array.isArray(va) && Array.isArray(vb2) && typeof va[0] === 'number') P[k] = [va[0] + (vb2[0] - va[0]) * t, va[1] + (vb2[1] - va[1]) * t];
+      else if (typeof va === 'number' && typeof vb2 === 'number') P[k] = va + (vb2 - va) * t;
+      else P[k] = va;
+    }
+    return P;
+  }
+  function animar(el, chave, ms) {
+    var ex = EX[chave], v = viewBox(ex), t0 = null, parado = false;
+    function f(ts) {
+      if (t0 == null) t0 = ts;
+      var ph = ((ts - t0) % ms) / ms, t = ph < 0.5 ? ph * 2 : (1 - ph) * 2; t = t * t * (3 - 2 * t);
+      el.innerHTML = quadro(ex, interpolar(ex, t), v.vb, v.chao);
+      if (!el._parar) requestAnimationFrame(f);
+    }
+    requestAnimationFrame(f);
+  }
+  root.Fig = { EX: EX, montar: montar, preencher: preencher, animar: animar, quadro: quadro, viewBox: viewBox, COR: COR };
+})(typeof window !== 'undefined' ? window : this);
+</script>
+<script>var D={"ex": {"agachamento": {"nome": "Agachamento", "alt": "mais simples: goblet, Smith ou leg press", "dica": "Calcanhar no chão, coluna neutra", "fig": "agachamento", "video": "https://youtu.be/RT-Mz8sDE6E"}, "supino": {"nome": "Supino reto", "alt": "barra ou halteres; ou máquina", "dica": "Escápulas “travadas” no banco", "fig": "supino", "video": "https://youtu.be/WZAIS2qKEOQ"}, "remada_curvada": {"nome": "Remada curvada", "alt": "ou remada na máquina com o peito apoiado (poupa a lombar)", "dica": "Puxe o cotovelo, não a mão", "fig": "remada_curvada", "video": "https://youtu.be/0tiqRGo7vuA"}, "remada_unilateral": {"nome": "Remada unilateral", "alt": "apoiada no banco; ou remada curvada com barra", "dica": "Costas retas; puxe o cotovelo", "fig": "remada_unilateral", "video": "https://youtu.be/d3FHYvHkUiw"}, "stiff": {"nome": "Stiff (terra romeno)", "alt": "", "dica": "Quadril para trás, joelho semiflexionado", "fig": "stiff", "video": "https://youtu.be/d6B1gWaEtmA"}, "desenvolvimento": {"nome": "Desenvolvimento com halteres", "alt": "sentado", "dica": "Sem arquear a lombar", "fig": "desenvolvimento", "video": "https://youtu.be/t41u2JipEt0"}, "elevacao_lateral": {"nome": "Elevação lateral", "alt": "", "dica": "Carga leve, controle total", "fig": "elevacao_lateral", "video": "https://youtu.be/W65Rw98-qLM"}, "rosca": {"nome": "Rosca direta", "alt": "", "dica": "Cotovelos parados", "fig": "rosca", "video": "https://youtu.be/uw-u4ekr7EE"}, "rosca_martelo": {"nome": "Rosca martelo", "alt": "", "dica": "Palmas frente a frente", "fig": "rosca", "video": "https://youtu.be/nGhao7v9EtM"}, "triceps_polia": {"nome": "Tríceps na polia (corda)", "alt": "", "dica": "Cotovelos colados ao corpo", "fig": "triceps_polia", "video": "https://youtu.be/-P6nbdJEq0o"}, "triceps_testa": {"nome": "Tríceps testa", "alt": "", "dica": "Cotovelos parados", "fig": "triceps_testa", "video": "https://youtu.be/wDkHFvDuwkU"}, "panturrilha": {"nome": "Panturrilha em pé", "alt": "", "dica": "Pausa de 1 s embaixo", "fig": "panturrilha", "video": "https://youtu.be/4_bpk2pfB8A"}, "panturrilha_sentada": {"nome": "Panturrilha sentada", "alt": "", "dica": "Amplitude completa", "fig": "panturrilha", "video": "https://youtu.be/E68mPsfrEw8"}, "prancha": {"nome": "Prancha", "alt": "", "dica": "Quadril alinhado", "fig": "prancha", "video": "https://youtu.be/gwn2zM-QCfs"}, "leg_press": {"nome": "Leg press 45°", "alt": "ou hack, agachamento frontal", "dica": "Não tire o quadril do banco", "fig": "leg_press", "video": "https://youtu.be/uJu3Yph10cI"}, "hack": {"nome": "Hack ou leg press", "alt": "", "dica": "Descida controlada", "fig": "leg_press", "video": "https://youtu.be/O8gOJu9ph2E"}, "supino_inclinado": {"nome": "Supino inclinado com halteres", "alt": "ou máquina", "dica": "Inclinação baixa (~30°)", "fig": "supino_inclinado", "video": "https://youtu.be/o08b-jTMePQ"}, "puxada": {"nome": "Puxada na frente", "alt": "ou barra fixa", "dica": "Peito para a barra", "fig": "puxada", "video": "https://youtu.be/DLzlkYuxYCM"}, "elevacao_pelvica": {"nome": "Elevação pélvica", "alt": "ou ponte de glúteo", "dica": "Pausa de 1 s no topo", "fig": "elevacao_pelvica", "video": "https://youtu.be/nwkXOSKGnQQ"}, "mesa_flexora": {"nome": "Mesa flexora", "alt": "", "dica": "Descida lenta", "fig": "mesa_flexora", "video": "https://youtu.be/sZw0r26ADYA"}, "remada_baixa": {"nome": "Remada baixa no cabo", "alt": "", "dica": "Peito aberto", "fig": "remada_baixa", "video": "https://youtu.be/V8M8TZqfOTE"}, "voador": {"nome": "Voador ou crucifixo", "alt": "máquina, cabo ou halteres", "dica": "Alongue sem forçar o ombro", "fig": "voador", "video": "https://youtu.be/of00J3j83JE"}, "face_pull": {"nome": "Face pull", "alt": "", "dica": "Cotovelos altos", "fig": "face_pull", "video": "https://youtu.be/jvwPfCguVQM"}, "abdominal": {"nome": "Abdominal no chão", "alt": "ou prancha lateral", "dica": "Suba só o tronco, sem puxar o pescoço", "fig": "abdominal", "video": "https://youtu.be/coMtU8BoKgg"}, "afundo_bulgaro": {"nome": "Afundo búlgaro (cada perna)", "alt": "mais fácil: avanço parado com apoio na parede", "dica": "Tronco levemente inclinado", "fig": "afundo_bulgaro", "video": "https://youtu.be/nYNv07T9Nb8"}, "extensora": {"nome": "Cadeira extensora", "alt": "", "dica": "Sem balançar o corpo", "fig": "extensora", "video": "https://youtu.be/CPCSF4EUk3o"}, "goblet": {"nome": "Agachamento goblet", "alt": "halter ou mochila no peito", "dica": "Calcanhar no chão", "fig": "goblet", "video": "https://youtu.be/ge1vdJRP0UA"}, "flexao": {"nome": "Flexão de braço", "alt": "joelhos no chão ou mãos na mesa", "dica": "Corpo em linha reta", "fig": "flexao", "video": "https://youtu.be/TbVWMhyax2U"}, "ponte_gluteo": {"nome": "Ponte de glúteo", "alt": "com peso no quadril quando ficar fácil", "dica": "Pausa de 1 s no topo", "fig": "ponte_gluteo", "video": "https://youtu.be/le8ZN02BQCE"}, "stiff_halteres": {"nome": "Stiff com halteres", "alt": "ou mochila", "dica": "Quadril para trás", "fig": "stiff", "video": "https://youtu.be/8R-Yz0yQIn0"}, "desenv_em_pe": {"nome": "Desenvolvimento em pé", "alt": "halteres ou garrafas", "dica": "Abdômen firme", "fig": "desenv_em_pe", "video": "https://youtu.be/t41u2JipEt0"}, "triceps_testa_chao": {"nome": "Tríceps testa deitado no chão", "alt": "com halteres ou garrafas", "dica": "Cotovelos apontando para o teto", "fig": "triceps_testa", "video": "https://youtu.be/wDkHFvDuwkU"}, "panturrilha_degrau": {"nome": "Panturrilha em degrau", "alt": "", "dica": "Pausa de 1 s embaixo", "fig": "panturrilha", "video": "https://youtu.be/h7bZ4XbuZLg"}}, "sessoes": {"A": {"titulo": "Treino A", "plano": "Plano A · corpo inteiro", "itens": [{"ex": "agachamento", "series": "3 × 6–10", "descanso": "2–3 min", "flag": ""}, {"ex": "supino", "series": "3 × 6–10", "descanso": "2–3 min", "flag": ""}, {"ex": "remada_unilateral", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "stiff", "series": "2 × 8–10", "descanso": "2 min", "flag": ""}, {"ex": "desenvolvimento", "series": "2 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "elevacao_lateral", "series": "2 × 12–20", "descanso": "1–1,5 min", "flag": ""}, {"ex": "rosca", "series": "2 × 10–15", "descanso": "", "flag": "bi"}, {"ex": "triceps_polia", "series": "2 × 10–15", "descanso": "1,5 min", "flag": "bi2"}, {"ex": "panturrilha", "series": "2 × 10–15", "descanso": "1 min", "flag": ""}, {"ex": "prancha", "series": "2 × 30–60 s", "descanso": "1 min", "flag": ""}]}, "B": {"titulo": "Treino B", "plano": "Plano A · corpo inteiro", "itens": [{"ex": "leg_press", "series": "3 × 8–12", "descanso": "2–3 min", "flag": ""}, {"ex": "supino_inclinado", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "puxada", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "elevacao_pelvica", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "mesa_flexora", "series": "2 × 10–15", "descanso": "1,5 min", "flag": ""}, {"ex": "remada_baixa", "series": "2 × 10–12", "descanso": "1,5–2 min", "flag": ""}, {"ex": "voador", "series": "2 × 12–15", "descanso": "1–1,5 min", "flag": ""}, {"ex": "face_pull", "series": "2 × 12–20", "descanso": "1 min", "flag": ""}, {"ex": "rosca_martelo", "series": "2 × 10–15", "descanso": "", "flag": "bi"}, {"ex": "triceps_testa", "series": "2 × 10–15", "descanso": "1,5 min", "flag": "bi2"}, {"ex": "abdominal", "series": "2 × 10–15", "descanso": "1 min", "flag": ""}]}, "A45": {"titulo": "Treino A · 45 minutos", "plano": "Plano A · versão curta (pares)", "itens": [{"ex": "agachamento", "series": "3 × 6–10", "descanso": "2 min", "flag": ""}, {"ex": "supino", "series": "3 × 6–10", "descanso": "", "flag": "bi"}, {"ex": "remada_unilateral", "series": "3 × 8–12", "descanso": "1,5 min", "flag": "bi2"}, {"ex": "stiff", "series": "2 × 8–10", "descanso": "", "flag": "bi"}, {"ex": "prancha", "series": "2 × 30–60 s", "descanso": "1,5 min", "flag": "bi2"}, {"ex": "elevacao_lateral", "series": "2 × 12–20", "descanso": "", "flag": "bi"}, {"ex": "panturrilha", "series": "2 × 10–15", "descanso": "1 min", "flag": "bi2"}, {"ex": "rosca", "series": "2 × 10–15", "descanso": "", "flag": "bi"}, {"ex": "triceps_polia", "series": "2 × 10–15", "descanso": "1,5 min", "flag": "bi2"}]}, "B45": {"titulo": "Treino B · 45 minutos", "plano": "Plano A · versão curta (pares)", "itens": [{"ex": "leg_press", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "supino_inclinado", "series": "3 × 8–12", "descanso": "", "flag": "bi"}, {"ex": "puxada", "series": "3 × 8–12", "descanso": "1,5 min", "flag": "bi2"}, {"ex": "elevacao_pelvica", "series": "3 × 8–12", "descanso": "", "flag": "bi"}, {"ex": "face_pull", "series": "2 × 12–20", "descanso": "1,25 min", "flag": "bi2"}, {"ex": "mesa_flexora", "series": "2 × 10–15", "descanso": "", "flag": "bi"}, {"ex": "remada_baixa", "series": "2 × 10–12", "descanso": "1,25 min", "flag": "bi2"}, {"ex": "rosca_martelo", "series": "2 × 10–15", "descanso": "", "flag": "bi"}, {"ex": "triceps_testa", "series": "2 × 10–15", "descanso": "1,5 min", "flag": "bi2"}]}, "S1": {"titulo": "Superior 1 · pesado", "plano": "Plano B · superior e inferior", "itens": [{"ex": "supino", "series": "4 × 5–8", "descanso": "2–3 min", "flag": ""}, {"ex": "remada_curvada", "series": "4 × 6–10", "descanso": "2–3 min", "flag": ""}, {"ex": "desenvolvimento", "series": "3 × 6–10", "descanso": "2 min", "flag": ""}, {"ex": "puxada", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "rosca", "series": "2 × 8–12", "descanso": "1,5 min", "flag": ""}, {"ex": "triceps_testa", "series": "2 × 8–12", "descanso": "1,5 min", "flag": ""}]}, "I1": {"titulo": "Inferior 1 · pesado", "plano": "Plano B · superior e inferior", "itens": [{"ex": "agachamento", "series": "4 × 5–8", "descanso": "2–3 min", "flag": ""}, {"ex": "stiff", "series": "3 × 6–10", "descanso": "2–3 min", "flag": ""}, {"ex": "leg_press", "series": "3 × 10–12", "descanso": "2 min", "flag": ""}, {"ex": "mesa_flexora", "series": "3 × 10–15", "descanso": "1,5 min", "flag": ""}, {"ex": "panturrilha", "series": "4 × 8–12", "descanso": "1 min", "flag": ""}, {"ex": "abdominal", "series": "3 × 10–15", "descanso": "1 min", "flag": ""}]}, "S2": {"titulo": "Superior 2 · volume", "plano": "Plano B · superior e inferior", "itens": [{"ex": "supino_inclinado", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "remada_unilateral", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "elevacao_lateral", "series": "3 × 12–20", "descanso": "1–1,5 min", "flag": ""}, {"ex": "voador", "series": "2 × 12–15", "descanso": "1–1,5 min", "flag": ""}, {"ex": "face_pull", "series": "3 × 12–20", "descanso": "1 min", "flag": ""}, {"ex": "rosca_martelo", "series": "2 × 10–15", "descanso": "1,5 min", "flag": ""}, {"ex": "triceps_polia", "series": "3 × 10–15", "descanso": "1,5 min", "flag": ""}]}, "I2": {"titulo": "Inferior 2 · volume", "plano": "Plano B · superior e inferior", "itens": [{"ex": "hack", "series": "3 × 8–12", "descanso": "2–3 min", "flag": ""}, {"ex": "afundo_bulgaro", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "elevacao_pelvica", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "extensora", "series": "2 × 12–15", "descanso": "1,5 min", "flag": ""}, {"ex": "mesa_flexora", "series": "2 × 10–15", "descanso": "1,5 min", "flag": ""}, {"ex": "panturrilha_sentada", "series": "3 × 12–20", "descanso": "1 min", "flag": ""}, {"ex": "prancha", "series": "3 × 30–60 s", "descanso": "1 min", "flag": ""}]}, "C1": {"titulo": "Treino C1 · em casa", "plano": "Plano C · em casa (halteres, mochila ou elástico)", "itens": [{"ex": "goblet", "series": "3 × 8–15", "descanso": "2 min", "flag": ""}, {"ex": "flexao", "series": "3 × 6–15", "descanso": "2 min", "flag": ""}, {"ex": "remada_unilateral", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "ponte_gluteo", "series": "3 × 10–15", "descanso": "1,5 min", "flag": ""}, {"ex": "desenv_em_pe", "series": "2 × 8–12", "descanso": "1,5 min", "flag": ""}, {"ex": "panturrilha_degrau", "series": "2 × 12–20", "descanso": "1 min", "flag": ""}, {"ex": "prancha", "series": "2 × 30–60 s", "descanso": "1 min", "flag": ""}]}, "C2": {"titulo": "Treino C2 · em casa", "plano": "Plano C · em casa (halteres, mochila ou elástico)", "itens": [{"ex": "afundo_bulgaro", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "stiff_halteres", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "flexao", "series": "3 × 6–15", "descanso": "2 min", "flag": ""}, {"ex": "remada_unilateral", "series": "3 × 8–12", "descanso": "2 min", "flag": ""}, {"ex": "elevacao_lateral", "series": "2 × 12–20", "descanso": "1 min", "flag": ""}, {"ex": "rosca", "series": "2 × 10–15", "descanso": "", "flag": "bi"}, {"ex": "triceps_testa_chao", "series": "2 × 8–15", "descanso": "1 min", "flag": "bi2"}, {"ex": "prancha", "series": "2 × 30–60 s", "descanso": "1 min", "flag": ""}]}}};</script>
+<script>
+(function(){
+"use strict";
+var RIR={1:"3",2:"2–3",3:"2",4:"2–3",5:"1–2",6:"1–2"};
+var FOCO={1:"Calibrar",2:"Construir",3:"Construir",4:"Respirar",5:"Apertar",6:"Apertar"};
+var BARRA=["agachamento","supino","remada_curvada"];
+var ORDEM=[["Plano A · 3 dias, academia",["A","B","A45","B45"]],["Plano B · 4 dias, academia",["S1","I1","S2","I2"]],["Plano C · em casa",["C1","C2"]]];
+var S={tela:"menu",t:null,sem:1,menos:false,passos:[],i:0,rest:null,hold:null,pausa:false,mem:{}};
+try{var m=localStorage.getItem("dia21tv");if(m){m=JSON.parse(m);S.sem=m.sem||1;S.menos=!!m.menos}}catch(e){}
+function salvar(){try{localStorage.setItem("dia21tv",JSON.stringify({sem:S.sem,menos:S.menos}))}catch(e){}}
+var $=function(s){return document.querySelector(s)};
+var app=$("#app");
+var audio=null;
+function bip(f,d){try{audio=audio||new (window.AudioContext||window.webkitAudioContext)();var o=audio.createOscillator(),g=audio.createGain();o.frequency.value=f;g.gain.value=.12;o.connect(g);g.connect(audio.destination);o.start();o.stop(audio.currentTime+d)}catch(e){}}
+function fmt(s){s=Math.max(0,Math.ceil(s));return Math.floor(s/60)+":"+("0"+(s%60)).slice(-2)}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function parseSer(txt){var m=/^(\d+)\s*×\s*(.+)$/.exec(txt);return{n:+m[1],rep:m[2].trim()}}
+function parseDesc(t){if(!t)return 60;var nums=(t.match(/[\d,]+/g)||[]).map(function(x){return parseFloat(x.replace(",","."))});if(!nums.length)return 60;var mid=nums.length>1?(nums[0]+nums[1])/2:nums[0];return Math.round(mid*60/15)*15}
+function nSeries(n){return (S.sem===1||S.menos)&&n>2?n-1:n}
+function montar(chave){
+  var sess=D.sessoes[chave],it=sess.itens,passos=[],i=0,total=it.length;
+  var grupos=[];
+  while(i<it.length){
+    if(it[i].flag==="bi"&&it[i+1]&&it[i+1].flag==="bi2"){grupos.push([i,i+1]);i+=2}else{grupos.push([i]);i+=1}
+  }
+  grupos.forEach(function(g){
+    var ns=g.map(function(k){return nSeries(parseSer(it[k].series).n)});
+    var nmax=Math.max.apply(null,ns);
+    var rest=parseDesc(it[g[g.length-1]].descanso||it[g[0]].descanso);
+    for(var s=1;s<=nmax;s++){
+      g.forEach(function(k,pos){
+        if(s<=ns[pos]){var p=parseSer(it[k].series);passos.push({k:k,ex:it[k].ex,s:s,ns:ns[pos],rep:p.rep,hold:/\ss$/.test(p.rep),par:g.length>1?(pos===0?"inicio":"fim"):"",pos:g.length>1?pos:0,gfim:pos===g.length-1,rest:rest})}
+      });
+    }
+  });
+  return passos;
+}
+function estimar(chave){var ps=montar(chave),t=5*60;ps.forEach(function(p,j){t+=70;if(p.gfim&&j<ps.length-1)t+=p.rest});return Math.round(t/60/5)*5}
+function nomeEx(p){return D.ex[p.ex]}
+/* ---------- telas ---------- */
+function menu(){
+  var h='<div class="menu-w"><div class="logo"><b>Treino na TV</b><span>Protocolo Dia 21</span></div><p class="sub">Escolha a semana e o treino. Cada exercício aparece em movimento, com a série, o descanso e o esforço do dia.</p>';
+  h+='<h2 class="s">1 · Semana do programa</h2><div class="sem">';
+  for(var w=1;w<=6;w++)h+='<button data-sem="'+w+'" class="'+(S.sem===w?"on":"")+'">'+w+'<small>'+FOCO[w]+'</small></button>';
+  h+='</div><label class="opt"><input type="checkbox" id="menos" '+(S.menos?"checked":"")+'> Estou muito cansado ou o dia está ruim: tirar 1 série de cada exercício (nunca menos de 2)</label>';
+  h+='<h2 class="s">2 · Treino</h2>';
+  ORDEM.forEach(function(g){
+    h+='<p class="sub" style="margin:2vh 0 1vh">'+g[0]+'</p><div class="grid">';
+    g[1].forEach(function(c){var s=D.sessoes[c];if(!s)return;h+='<button class="card" data-t="'+c+'"><b>'+esc(s.titulo)+'</b><span>'+s.itens.length+' exercícios</span><em>≈ '+estimar(c)+' min</em></button>'});
+    h+='</div>';
+  });
+  h+='<div class="dica-box"><b>Como usar.</b> Faça a série, aperte <b>Enter</b> (ou o botão) e o descanso começa sozinho. Ao fim do descanso você ouve três bips. <b>Setas</b> voltam e avançam, <b>+</b> soma 30 s ao descanso, <b>P</b> pausa, <b>F</b> tela cheia. O relógio ajuda, mas <b>quem manda é o esforço</b>: pare a série quando sobrar o número de repetições indicado. Tempos estimados: 70 s por série (execução e troca de aparelho) mais os descansos, e 5 min de aquecimento.</div></div>';
+  app.innerHTML=h;
+  app.querySelectorAll("[data-sem]").forEach(function(b){b.onclick=function(){S.sem=+b.dataset.sem;salvar();menu()}});
+  $("#menos").onchange=function(){S.menos=this.checked;salvar();menu()};
+  app.querySelectorAll("[data-t]").forEach(function(b){b.onclick=function(){iniciar(b.dataset.t)}});
+}
+function iniciar(c,pasInicial){
+  S.t=c;S.passos=montar(c);S.i=pasInicial==null?-1:pasInicial;S.rest=null;S.hold=null;
+  try{if(navigator.wakeLock)navigator.wakeLock.request("screen").catch(function(){})}catch(e){}
+  bip(660,.08);
+  S.i<0?aquecer():treino();
+}
+function topo(){
+  var s=D.sessoes[S.t];
+  return '<div class="top"><span class="chip">'+esc(s.titulo)+' · semana '+S.sem+' ('+FOCO[S.sem]+')</span><span id="prg"></span><button class="menu" id="bmenu">☰ Menu</button></div>';
+}
+function aquecer(){
+  S.tela="aq";var a=D.sessoes[S.t].itens[0];
+  app.innerHTML=topo()+'<div class="fim"><h1>Aquecimento</h1><p><b>5 minutos leves</b> (esteira, bike, remo ou marcha no lugar). Depois, no primeiro exercício (<b>'+esc(D.ex[a.ex].nome)+'</b>), faça <b>2 séries leves</b> antes da primeira série valendo.</p><p>'+(S.sem===1?"Na semana 1, use um peso que pareça fácil.":"Use metade e três quartos da carga da semana anterior.")+'</p><div class="btns"><button class="primario" id="ok">Começar o treino ›</button></div></div>';
+  $("#ok").onclick=function(){S.i=0;treino()};$("#bmenu").onclick=voltarMenu;
+}
+function voltarMenu(){S.tela="menu";S.rest=null;S.hold=null;menu()}
+function treino(){
+  S.tela="trabalho";S.rest=null;
+  if(S.i>=S.passos.length)return fim();
+  var p=S.passos[S.i],e=nomeEx(p),it=D.sessoes[S.t].itens;
+  var rir=RIR[S.sem],barra=BARRA.indexOf(p.ex)>=0&&S.sem>=5;if(barra)rir="2";
+  var nEx=it.length;
+  var h=topo()+'<div class="main"><div class="figcard"><div id="fig"></div></div><div class="info"><div class="n">'+(p.k+1)+'<small style="font-size:.4em;color:var(--t2)"> / '+nEx+'</small></div><h1>'+esc(e.nome)+'</h1>';
+  h+=e.alt?'<p class="alt">'+esc(e.alt)+'</p>':'<p class="alt">&nbsp;</p>';
+  h+='<div class="chips"><span class="big">Série '+p.s+' de '+p.ns+'</span><span>'+esc(p.rep)+(p.hold?"":" repetições")+'</span><span class="rir">Deixe '+rir+(barra?" (barra livre)":"")+" de reserva"+'</span></div>';
+  h+='<p class="dica">'+esc(e.dica)+'</p>';
+  if(e.video)h+='<a class="video" href="'+e.video+'" target="_blank" rel="noopener">▶ Ver vídeo da técnica (YouTube, de terceiros)</a>';
+  if(p.par==="inicio")h+='<span class="par">PAR: logo depois, sem descansar, faça o próximo exercício</span>';
+  if(p.par==="fim")h+='<span class="par">FIM DO PAR: agora sim, descanse</span>';
+  h+='</div></div><div class="bar" id="bar"></div><div class="btns"><button id="volta">‹ Voltar</button><button class="primario" id="ok">'+(p.hold?"Começar ›":"Série feita ✓")+'</button><button id="pula">Pular ›</button></div><div class="hint">Enter = série feita · ← voltar · → pular · + 30 s · P pausa · M menu · F tela cheia</div>';
+  app.innerHTML=h;
+  // figura em movimento
+  var fig=$("#fig");if(S.mem.fig)S.mem.fig._parar=true;S.mem.fig=fig;
+  if(e.fig&&Fig.EX[e.fig])Fig.animar(fig,e.fig,2800);
+  // barra de progresso por exercício
+  var bar="";for(var k=0;k<nEx;k++)bar+='<i class="'+(k<p.k?"f":k===p.k?"a":"")+'"></i>';$("#bar").innerHTML=bar;
+  $("#prg").textContent="Exercício "+(p.k+1)+" de "+nEx;
+  $("#bmenu").onclick=voltarMenu;$("#volta").onclick=voltar;$("#pula").onclick=pular;$("#ok").onclick=ok;
+}
+function ok(){
+  if(S.tela==="aq"){S.i=0;return treino()}
+  if(S.tela==="fim"){return voltarMenu()}
+  if(S.tela==="descanso"){return fimDescanso()}
+  var p=S.passos[S.i];
+  if(p.hold){
+    if(!S.hold){S.hold=Date.now();var b=$("#ok");b.textContent="Terminei ✓";b.dataset.t=1;return}
+    S.hold=null;
+  }
+  var ultimo=S.i>=S.passos.length-1;
+  if(ultimo){S.i++;return fim()}
+  if(p.gfim)descanso(p.rest);else{S.i++;treino()}
+}
+function pular(){if(S.tela==="descanso")return fimDescanso();if(S.tela==="trabalho"){S.hold=null;S.i=Math.min(S.i+1,S.passos.length);treino()}}
+function voltar(){if(S.tela==="descanso"){S.rest=null;return treino()}if(S.tela==="trabalho"&&S.i>0){S.hold=null;S.i--;treino()}else if(S.tela==="trabalho"&&S.i===0){aquecer()}}
+function descanso(seg){
+  S.tela="descanso";S.rest={total:seg,fim:Date.now()+seg*1000,ult:null,extra:0};
+  var nxt=S.passos[S.i+1],ne=nomeEx(nxt);
+  var h='<div class="rest"><div class="lab">Descanse</div><div class="ring"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="#2A2D34" stroke-width="6"/><circle id="arco" cx="50" cy="50" r="45" fill="none" stroke="#FF5A1F" stroke-width="6" stroke-linecap="round" stroke-dasharray="282.74" stroke-dashoffset="0"/></svg><div class="t" id="tempo">'+fmt(seg)+'</div></div>';
+  h+='<div class="prox">Próximo<b>'+esc(ne.nome)+' · série '+nxt.s+' de '+nxt.ns+'</b></div><div class="btns"><button id="mais">+ 30 s</button><button class="primario" id="ok">Pular descanso ›</button><button id="volta">‹ Voltar</button></div></div>';
+  app.insertAdjacentHTML("beforeend",h);
+  $("#mais").onclick=maisTempo;$("#ok").onclick=fimDescanso;$("#volta").onclick=function(){var r=document.querySelector(".rest");if(r)r.remove();S.rest=null;treino()};
+}
+function maisTempo(){if(S.rest){S.rest.fim+=30000;S.rest.total+=30}}
+function fimDescanso(){var r=document.querySelector(".rest");if(r)r.remove();S.rest=null;S.i++;treino()}
+function fim(){
+  S.tela="fim";var s=D.sessoes[S.t];
+  app.innerHTML='<div class="fim"><h1>Treino feito</h1><p>'+esc(s.titulo)+', semana '+S.sem+'. Anote carga, repetições e RIR de cada série na planilha ou na folha do capítulo 15.</p><p>Se alguma série foi trapaceada, ela não conta para a progressão. <b>Treino curto ainda é treino.</b></p><div class="btns"><button class="primario" id="ok">Voltar ao menu</button></div></div>';
+  $("#ok").onclick=voltarMenu;bip(880,.15);
+}
+/* ---------- relógio ---------- */
+setInterval(function(){
+  if(S.pausa)return;
+  if(S.tela==="descanso"&&S.rest){
+    var falta=(S.rest.fim-Date.now())/1000,tp=$("#tempo"),ar=$("#arco");
+    if(tp)tp.textContent=fmt(falta);
+    if(ar)ar.setAttribute("stroke-dashoffset",String(282.74*(1-Math.max(0,falta)/S.rest.total)));
+    var c=Math.ceil(falta);
+    if(c<=3&&c>=1&&S.rest.ult!==c){S.rest.ult=c;bip(c===1?1040:760,.12)}
+    if(falta<=0){bip(1040,.35);fimDescanso()}
+  }else if(S.tela==="trabalho"&&S.hold){
+    var b=$("#ok");if(b){b.textContent="Terminei ✓ · "+fmt((Date.now()-S.hold)/1000)}
+  }
+},250);
+document.addEventListener("keydown",function(ev){
+  var k=ev.key;
+  if(S.tela==="menu")return;
+  if(k==="Enter"||k===" "){ev.preventDefault();ok()}
+  else if(k==="ArrowRight")pular();
+  else if(k==="ArrowLeft"||k==="Backspace")voltar();
+  else if(k==="+"||k==="=")maisTempo();
+  else if(k==="p"||k==="P"){S.pausa=!S.pausa;if(S.pausa&&S.rest)S.rest.pausadoEm=Date.now();else if(S.rest&&S.rest.pausadoEm){S.rest.fim+=Date.now()-S.rest.pausadoEm;S.rest.pausadoEm=null}}
+  else if(k==="m"||k==="M"||k==="Escape")voltarMenu();
+  else if(k==="f"||k==="F"){if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen()}
+});
+/* link direto: #t=A&s=2&p=5 (p = passo; -1 = aquecimento) */
+var q={};location.hash.replace(/^#/,"").split("&").forEach(function(x){var a=x.split("=");if(a[0])q[a[0]]=a[1]});
+if(q.s)S.sem=Math.max(1,Math.min(6,+q.s||1));
+if(q.m)S.menos=q.m==="1";
+if(q.t&&D.sessoes[q.t]){iniciar(q.t,q.p==null?-1:+q.p);if(q.r&&S.tela==="trabalho"){var pp=S.passos[S.i];if(pp&&pp.gfim)descanso(pp.rest)}}else menu();
+})();
+</script>
+</body>
+</html>
