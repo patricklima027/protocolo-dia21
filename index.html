@@ -9,6 +9,12 @@
 <meta property="og:title" content="Protocolo Verão X · Monte o seu protocolo em 1 minuto">
 <meta property="og:description" content="Faltam menos de 50 dias pro verão e ainda dá tempo de secar. 6 semanas de treino, alimentação e rotina, com a fonte de cada afirmação.">
 <meta property="og:image" content="og.jpg"><!-- TROCAR por URL absoluta com o domínio: https://SEU-DOMINIO/img/og.jpg -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Protocolo Verão X: 6 semanas de treino, alimentação e rotina para o verão">
+<meta property="og:site_name" content="Protocolo Verão X">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#101114">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -145,7 +151,7 @@ tr:nth-child(even) td{background:#FBF8F2}
 .emo-f{max-width:560px;margin:14px auto 0;text-align:center;color:#B9BCC4;font-size:16px}
 
 /* oferta */
-.oferta{background:var(--g);color:#fff;position:relative;overflow:hidden;padding:34px 0 64px}
+.oferta{background:var(--g);color:#fff;position:relative;overflow:hidden;padding:34px 0 64px;scroll-margin-top:54px}
 .oferta .sun{position:absolute;width:520px;height:520px;border-radius:50%;left:-220px;bottom:-300px;background:linear-gradient(155deg,var(--sol2),var(--sol) 48%,var(--sol3));opacity:.9}
 .cx{position:relative;max-width:560px;margin:14px auto 0;background:#fff;color:var(--t1);border-radius:18px;padding:30px 26px;box-shadow:0 30px 70px -20px rgba(0,0,0,.6)}
 .cx .topo{font:800 15px var(--cond);letter-spacing:.2em;text-transform:uppercase;color:var(--sol)}
@@ -154,10 +160,17 @@ tr:nth-child(even) td{background:#FBF8F2}
 .cx li{padding:9px 0 9px 30px;border-bottom:1px solid var(--linha);position:relative;font-size:16px}
 .cx li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:800}
 .cx li small{display:block;color:var(--t3);font-size:13.5px}
-.preco{display:flex;align-items:baseline;gap:10px;margin:10px 0 4px}
+.preco{display:flex;align-items:baseline;gap:10px;margin:10px 0 18px}
 .preco .v{font:800 76px/1 var(--cond);color:var(--g)}
 .preco .v small{font-size:34px;vertical-align:top}
 .preco .t{font-size:15px;color:var(--t2)}
+@media(max-width:480px){.preco{flex-wrap:wrap;gap:4px 10px}.preco .t{flex-basis:100%}}
+.de{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;margin:14px 0 -2px;font-size:22px;line-height:1.2;color:#6B6F77}
+.de[hidden]{display:none}
+.de s{text-decoration-thickness:2px}
+.de .off{font:800 15px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;background:var(--sol);color:#fff;padding:5px 10px;border-radius:99px;white-space:nowrap}
+.rs-of .de{justify-content:center;color:#C4C6CC;margin:14px 0 -4px}
+@media(max-width:360px){.de{font-size:18px;gap:6px 8px}.de .off{font-size:13px;padding:4px 8px}}
 .lote{display:inline-block;background:var(--sol-s);color:#B8390F;font-weight:700;font-size:13.5px;padding:5px 11px;border-radius:99px;margin-bottom:6px}
 .gar{display:flex;gap:12px;align-items:flex-start;margin-top:18px;font-size:14.5px;color:var(--t2)}
 .gar b{color:var(--t1)}
@@ -187,6 +200,7 @@ footer .leg{max-width:760px}
 .hero2 h1{font-size:clamp(46px,11.5vw,84px);margin-bottom:16px}
 .hero2 h1 b{color:var(--sol);font-weight:800}
 .hero2 .lead{color:#D5D6DA;margin-bottom:22px}
+@media(max-width:480px){.hero2 .kick{font-size:12.5px;letter-spacing:.16em}}
 .modelo{position:relative;isolation:isolate;justify-self:center;width:min(390px,78%);margin:14px auto 30px}
 .modelo::before{content:"";position:absolute;z-index:-1;width:112%;aspect-ratio:1;left:-6%;top:-6%;border-radius:50%;
   background:repeating-linear-gradient(to bottom,transparent 0 14px,#101114 14px 24px) 0 50%/100% 26% no-repeat,
@@ -250,6 +264,7 @@ footer .leg{max-width:760px}
 .rs-cta .cta{margin-top:0;font-size:21px;padding:14px 18px;white-space:normal;line-height:1.08}
 .rs-preco{margin:8px 0 0;text-align:center;font-size:13.5px;color:#B9BCC4}
 .rs-cta .link{display:block;text-align:center;color:#C9CBD0;font-size:14.5px;margin-top:10px}
+@media(max-width:360px){.rs .big{font-size:46px}.rs .big small{font-size:19px;white-space:nowrap}.rs-cta .cta{font-size:18px;padding:13px 8px;letter-spacing:.03em}.rs .rs-preco{font-size:13px}}
 
 /* rotas por segunda */
 .rotas{display:grid;gap:8px;max-width:560px;margin:18px auto 0}
@@ -398,6 +413,7 @@ footer .leg{max-width:760px}
       </ul>
       <span class="lote" id="lote">Preço de lançamento</span>
       <div class="rel" id="rel" hidden></div>
+      <div class="de" id="de"><span>De <s>R$ 399,99</s> por</span><b class="off">83% OFF</b></div>
       <div class="preco"><div class="v"><small>R$</small><span id="preco">67,99</span></div><div class="t">pagamento único<br><b>acesso vitalício</b> · Pix ou cartão</div></div>
       <a class="cta grande alerta" id="cta-final" href="#" data-ev="InitiateCheckout">Eu ainda quero mudar de vida!</a>
       <p class="cta-sub">Dá <b>R$ 1,62 por dia</b> nas 6 semanas · acesso vitalício</p>
@@ -447,6 +463,7 @@ footer .leg{max-width:760px}
 /* ---- configuração (trocar aqui) ---- */
 var CHECKOUT = "https://pay.kiwify.com.br/QAPyhEH";   // checkout da Kiwify (Hotmart/Cakto: trocar aqui se preferir)
 var PRECO    = "67,99";                               // preço exibido (precisa ser igual ao da Kiwify/Hotmart)
+var PRECO_DE = "399,99";                              // preço de referência riscado ("De R$ … por"). Só use um preço que foi realmente praticado. Vazio ("") = a linha e o selo somem
 var LOTE     = "";                                    // ex.: "Preço de lançamento até 15/11" — só use se o preço realmente subir na data
 var VERAO    = new Date(2026, 11, 21);                // 21/12/2026 (início do verão)
 var CARNAVAL = new Date(2027, 1, 9);                  // terça de Carnaval 2027
@@ -462,7 +479,7 @@ function r5(n){return Math.round(n/5)*5;}
 var alvo = dias(VERAO) > 0 ? VERAO : CARNAVAL, nomeAlvo = alvo === VERAO ? "pro verão" : "pro Carnaval";
 document.querySelectorAll("[data-dias]").forEach(function(e){e.textContent=dias(alvo);});
 document.querySelectorAll("[data-segundas]").forEach(function(e){e.textContent=segundas(alvo);});
-document.getElementById("barra-txt").innerHTML='Faltam <b>'+dias(alvo)+'</b> dias '+nomeAlvo;
+(function(){var n=dias(alvo);document.getElementById("barra-txt").innerHTML=n<=0?'O verão <b>começou</b>':(n===1?'Falta <b>1</b> dia ':'Faltam <b>'+n+'</b> dias ')+nomeAlvo;})();
 function menosDe(n){var l=[50,40,30,20,10],r=null;l.forEach(function(x){if(n<x)r=x;});return r;}
 (function(){var n=dias(alvo),m=menosDe(n),h=document.getElementById("h1");
   if(n<=0)h.innerHTML='O verão <b>começou</b>. <b>Ainda dá tempo</b> de secar.';
@@ -471,6 +488,12 @@ function menosDe(n){var l=[50,40,30,20,10],r=null;l.forEach(function(x){if(n<x)r
 /* ---- oferta ---- */
 function checkoutUrl(){var u=CHECKOUT;if(u==="#")return u;var q=location.search.replace(/^\?/,"");if(q)u+=(u.indexOf("?")>-1?"&":"?")+q;return u;}
 document.getElementById("preco").textContent = PRECO;
+function num(s){return parseFloat(String(s).replace(/\./g,"").replace(",","."));}
+function deHtml(){   // linha "De R$ 399,99 por" + selo de desconto; vazia se PRECO_DE não estiver definido ou não for maior que PRECO
+  var a=num(PRECO_DE),b=num(PRECO);if(!PRECO_DE||!(a>b))return "";
+  return '<span>De <s>R$ '+PRECO_DE+'</s> por</span><b class="off">'+Math.round((1-b/a)*100)+'% OFF</b>';
+}
+(function(){var d=document.getElementById("de"),h=deHtml();if(h){d.innerHTML=h;d.hidden=false;}else{d.innerHTML="";d.hidden=true;}})();
 var lt=document.getElementById("lote"); if(LOTE){lt.textContent=LOTE;}else{lt.style.display="none";}
 document.getElementById("cta-final").href = checkoutUrl();
 
@@ -516,14 +539,15 @@ var Q=[
  {id:"carb",tipo:"multi",t:"E de carboidrato?",sub:"Marque quantos quiser.",op:[["arroz","🍚 Arroz"],["mandioca","🍠 Mandioca e batata"],["pao","🍞 Pão"]]}
 ];
 var QZ=document.getElementById("qz"),BODY=document.getElementById("qz-body"),BAR=document.getElementById("qz-bar"),NUM=document.getElementById("qz-n"),BACK=document.getElementById("qz-back");
-var S={},idx=0,STOP=false,RES=false,lastFocus=null;
+var S={},idx=0,STOP=false,RES=false,lastFocus=null,TMR=null;
 
 function abrir(){lastFocus=document.activeElement;S={};idx=0;STOP=false;RES=false;QZ.classList.add("on");document.body.style.overflow="hidden";ev("QuizStart",true);render();}
-function fechar(){QZ.classList.remove("on");document.body.style.overflow="";if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+function fechar(){if(TMR){clearTimeout(TMR);TMR=null;}QZ.classList.remove("on");document.body.style.overflow="";if(lastFocus&&lastFocus.focus)lastFocus.focus();}
 document.querySelectorAll("[data-quiz]").forEach(function(b){b.addEventListener("click",abrir);});
 document.getElementById("qz-x").addEventListener("click",fechar);
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&QZ.classList.contains("on"))fechar();});
 BACK.addEventListener("click",function(){
+  if(TMR){clearTimeout(TMR);TMR=null;}
   if(STOP){STOP=false;render();return;}
   if(RES){RES=false;idx=Q.length-1;render();return;}
   if(idx>0){idx--;render();}
@@ -531,6 +555,7 @@ BACK.addEventListener("click",function(){
 
 function render(){
   var q=Q[idx],h;
+  if(TMR){clearTimeout(TMR);TMR=null;}
   BACK.hidden=(idx===0);
   BAR.style.width=Math.round(idx/Q.length*100)+"%";NUM.textContent=(idx+1)+"/"+Q.length;
   h='<div class="qz-in"><h2>'+q.t+'</h2>'+(q.sub?'<p class="sub">'+q.sub+'</p>':'');
@@ -551,7 +576,7 @@ function ligar(q){
   var ops=BODY.querySelectorAll(".op");
   ops.forEach(function(b){b.addEventListener("click",function(){
     var v=b.getAttribute("data-v");
-    if(q.tipo==="uma"){S[q.id]=v;ops.forEach(function(x){x.setAttribute("aria-pressed",x===b);});setTimeout(avancar,170);}
+    if(q.tipo==="uma"){if(TMR)return;S[q.id]=v;ops.forEach(function(x){x.setAttribute("aria-pressed",x===b);});TMR=setTimeout(function(){TMR=null;avancar();},170);}
     else{
       var cur=S[q.id]||[],i=cur.indexOf(v);
       if(i>-1)cur.splice(i,1);
@@ -569,6 +594,7 @@ function avancar(){
   var q=Q[idx],err=document.getElementById("qe");
   if(q.tipo==="num"){
     var raw=document.getElementById("qi").value.replace(",",".").trim(),n=parseFloat(raw);
+    if(q.id==="altura"&&n>=1.3&&n<=2.2)n=Math.round(n*100);   // "1,75" (metros) vira 175 cm
     if(!raw||isNaN(n)||n<q.min||n>q.max){err.textContent="Digite um valor entre "+q.min+" e "+q.max+" "+q.un+".";return;}
     S[q.id]=n;
     if(q.id==="idade"&&n<18)return parar("menor");
@@ -621,35 +647,35 @@ function resultado(){
   ev("QuizComplete",true);
   var s=S,pl=planoTreino(s),dn=melhorDia(s),f=fator(s.peso),fe=f[1];
   /* relógio */
-  var st=proxSegunda(),ate=dias(VERAO),sem=Math.floor(Math.round((VERAO-st)/864e5)/7),hojeSeg=(st.getTime()===hoje().getTime());
+  var st=proxSegunda(),ate=dias(VERAO),ateAlvo=dias(alvo),sem=Math.floor(Math.round((VERAO-st)/864e5)/7),hojeSeg=(st.getTime()===hoje().getTime());
   var rel,off=[];
   if(ate<=0){rel="O verão já começou. O manual traz o ciclo até o Carnaval (capítulo 14). Comece na segunda, "+fmtD(st)+".";sem=6;}
   else if(sem>=6)rel=(hojeSeg?"Começando hoje":"Começando na segunda, "+fmtD(st))+", as 6 semanas terminam em 20/12, na véspera do verão.";
-  else if(sem>=3){rel="Começando na segunda, "+fmtD(st)+", cabem "+sem+" semanas. O manual diz quais semanas pular e também termina em 20/12. Quanto antes você largar, mais folga tem.";off=sem===5?[4]:sem===4?[2,4]:[2,3,4];}
-  else rel="Faltam poucas semanas para o dia 21. O manual traz a reta final planejada e o ciclo até o Carnaval, e não promete resultado em prazo curto.";
+  else if(sem>=3){rel=(hojeSeg?"Começando hoje":"Começando na segunda, "+fmtD(st))+", cabem "+sem+" semanas. O manual diz quais semanas pular e também termina em 20/12. Quanto antes você largar, mais folga tem.";off=sem===5?[4]:sem===4?[2,4]:[2,3,4];}
+  else rel="Falta pouco para o verão (21/12). O manual traz a reta final planejada e o ciclo até o Carnaval, e não promete resultado em prazo curto.";
   var nomes=["1 Calibrar","2 Construir","3 Construir","4 Respirar","5 Apertar","6 Apertar"],chips="";
   nomes.forEach(function(n,i){chips+='<span'+(off.indexOf(i+1)>-1?' class="off"':'')+'>'+n+'</span>';});
   /* proteína */
   var pg=r5(s.peso*2),lo=r5(s.peso*1.6),hi=r5(s.peso*2.4),porRef=Math.round(s.peso*0.5);
   /* energia (Mifflin-St Jeor × PAL 1,55) */
   var kc="";
-  if(s.sexo!=="n"){var rep=10*s.peso+6.25*s.altura-5*s.idade+(s.sexo==="m"?5:-161);kc='<div class="bloco"><span class="k">Ponto de partida de energia</span><span class="big">≈ '+milhar(Math.round(rep*1.55/10)*10)+'<small>kcal/dia para manter o peso</small></span><p>Equação de Mifflin-St Jeor × nível de atividade 1,55 (quem treina 3 a 4 vezes por semana). É só um <b>ponto de partida</b>: o manual ensina a calibrar com a média do seu peso real, porque as equações erram para muita gente.</p></div>';}
+  if(s.sexo!=="n"){var rep=10*s.peso+6.25*s.altura-5*s.idade+(s.sexo==="m"?5:-161);kc='<div class="bloco"><span class="k">Ponto de partida de energia</span><span class="big">≈ '+milhar(Math.round(rep*1.55/10)*10)+'<small>kcal por dia</small></span><p>Estimativa para <b>manter o peso</b>. Equação de Mifflin-St Jeor × nível de atividade 1,55 (quem treina 3 a 4 vezes por semana). É só um <b>ponto de partida</b>: o manual ensina a calibrar com a média do seu peso real, porque as equações erram para muita gente.</p></div>';}
   /* comida */
   var d=DIA[dn],veg=(s.prot||[]).every(function(x){return x==="ovos"||x==="feijao";}),pc=Math.round(d.p*fe);
   var fnota=s.peso<57||s.peso>105?" Para o seu peso, a tabela de adaptação do capítulo 5B dá o fator exato.":"";
   var cx='<div class="bloco"><span class="k">Sua comida</span><h3>'+d.t+'</h3><p>É o dos 3 cardápios-exemplo que mais combina com o que você gosta. No seu peso, as porções ficam em torno de <b>×'+String(fe).replace(".",",")+'</b> do exemplo, com cerca de <b>'+pc+' g de proteína</b> no dia.'+fnota+'</p>'+(veg?'<p>Os exemplos incluem carne, frango ou peixe. O capítulo 5B traz a tabela de trocas para adaptar ao que você come.</p>':'')+'<div class="prev"><img src="'+d.img+'" alt="Cartão do cardápio-exemplo" loading="lazy"></div><p class="peq">Cálculo com a Tabela Brasileira de Composição de Alimentos (TACO, UNICAMP). É um exemplo ilustrativo, não a sua dieta: plano alimentar individual é função de nutricionista.</p></div>';
   var h='<div class="qz-in rs"><span class="kick">Seu protocolo</span><h2>Pronto. É isto que <span style="color:var(--sol)">combina com você</span></h2><p class="sub" style="color:#B9BBC1;margin-bottom:18px">Estimativas educativas feitas com as regras e as fontes do manual. Não são prescrição.</p>'
-  +'<div class="bloco"><span class="k">Seu relógio</span><span class="big">'+ate+'<small>dias até o '+(alvo===VERAO?"verão":"Carnaval")+'</small></span><p>'+rel+'</p><div class="chips">'+chips+'</div></div>'
+  +'<div class="bloco"><span class="k">Seu relógio</span><span class="big">'+ateAlvo+'<small>'+(ateAlvo===1?"dia":"dias")+' até o '+(alvo===VERAO?"verão":"Carnaval")+'</small></span><p>'+rel+'</p><div class="chips">'+chips+'</div></div>'
   +'<div class="bloco"><span class="k">Seu treino</span><h3>'+pl.nome+'</h3><p>'+pl.txt+'</p>'+(pl.nota?'<p><b>'+pl.nota+'</b></p>':'')+(pl.ct?'<p>'+pl.ct+'</p>':'')+'<div class="prev"><img src="'+pl.img+'" alt="Cartão do treino, com figura de cada exercício" loading="lazy"></div><p class="peq">É um dos 23 cartões para guardar no celular. O manual traz a figura de cada exercício, a progressão semana a semana e o Treino na TV.</p></div>'
   +'<div class="bloco"><span class="k">Sua proteína</span><span class="big">≈ '+pg+'<small>g por dia</small></span><p>Ponto de partida do manual: <b>2,0 g por kg</b>, dentro da faixa de 1,6 a 2,4 g/kg descrita em revisões de especialistas (Hector &amp; Phillips, 2018; Morton et al., 2018). Para você: de <b>'+lo+' a '+hi+' g</b> por dia, em 4 refeições de cerca de <b>'+porRef+' g</b>.</p><p class="peq">Ponto de partida, não regra individual. O manual explica como ajustar e quanto de cada alimento rende 30 g de proteína.</p></div>'
   +kc+cx
   +'<div class="bloco"><span class="k">E mais o que está no pacote</span><ul class="inc"><li>Manual em PDF, com a fonte de cada afirmação (98 referências)</li><li>Treino na TV, com exercícios animados e cronômetro de descanso</li><li>23 cartões para guardar no celular</li><li>Planilha que calcula média do peso, ritmo e proteína sozinha</li><li>Regras de decisão para toda segunda-feira</li></ul><p class="peq">Pagamento único de R$ '+PRECO+' · acesso vitalício · 7 dias de garantia.</p></div>'
-  +'<div class="rs-of"><span class="k"><i></i>A decisão é sua</span><div class="rs-of-t">Eu ainda quero mudar de vida</div><div class="rs-of-p"><small>R$</small>'+PRECO+'</div><p>Dá <b>R$ 1,62 por dia</b> nas 6 semanas · pagamento único · acesso vitalício · 7 dias de garantia</p><div class="rel" id="rel2" hidden></div></div>'
+  +'<div class="rs-of"><span class="k"><i></i>A decisão é sua</span><div class="rs-of-t">Eu ainda quero mudar de vida</div>'+(deHtml()?'<div class="de">'+deHtml()+'</div>':'')+'<div class="rs-of-p"><small>R$</small>'+PRECO+'</div><p>Dá <b>R$ 1,62 por dia</b> nas 6 semanas · pagamento único · acesso vitalício · 7 dias de garantia</p><div class="rel" id="rel2" hidden></div></div>'
   +'<p class="peq" style="margin-bottom:12px">Material educativo, baseado em fontes públicas. Não foi elaborado nem assinado por nutricionista ou profissional de Educação Física e não os substitui. Resultados variam de pessoa para pessoa; nada aqui é garantia de resultado. Suas respostas ficaram só neste aparelho.</p>'
   +'<div class="rs-cta"><a class="cta grande alerta" id="qbuy" href="'+checkoutUrl()+'" data-ev="InitiateCheckout">Eu ainda quero mudar de vida!</a><p class="rs-preco">Protocolo Verão X · R$ '+PRECO+' · acesso vitalício</p><a class="link" href="#oferta" id="qver">Ver tudo o que está incluso</a></div></div>';
   BODY.innerHTML=h;BODY.scrollTop=0;relogio(document.getElementById("rel2"));
   document.getElementById("qbuy").addEventListener("click",function(){ev("InitiateCheckout");});
-  document.getElementById("qver").addEventListener("click",function(e){e.preventDefault();fechar();document.getElementById("oferta").scrollIntoView();});
+  document.getElementById("qver").addEventListener("click",function(e){e.preventDefault();ev("ViewContent");fechar();document.getElementById("oferta").scrollIntoView();});
 }
 if(location.hash==="#quiz")abrir();
 
