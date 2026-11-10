@@ -424,10 +424,10 @@ footer .leg{max-width:760px}
       </ul>
       <span class="lote" id="lote">Preço de lançamento</span>
       <div class="rel" id="rel" hidden></div>
-      <div class="de" id="de"><span>De <s>R$ 399,99</s> por</span><b class="off">83% OFF</b></div>
-      <div class="preco"><div class="v"><small>R$</small><span id="preco">67,99</span></div><div class="t">pagamento único<br><b>acesso vitalício</b> · Pix ou cartão</div></div>
+      <div class="de" id="de"><span>De <s>R$ 399,99</s> por</span><b class="off">88% OFF</b></div>
+      <div class="preco"><div class="v"><small>R$</small><span id="preco">47,99</span></div><div class="t">pagamento único<br><b>acesso vitalício</b> · Pix ou cartão</div></div>
       <a class="cta grande alerta" id="cta-final" href="#" data-ev="InitiateCheckout">Eu ainda quero mudar de vida!</a>
-      <p class="cta-sub">Dá <b>R$ 1,62 por dia</b> nas 6 semanas · acesso vitalício</p>
+      <p class="cta-sub">Dá <b>R$ 1,14 por dia</b> nas 6 semanas · acesso vitalício</p>
       <div class="gar"><span>🛡️</span><div><b>7 dias de garantia.</b> Se não for o que você esperava, devolvemos 100% do valor, sem perguntas.</div></div>
     </div>
   </div>
@@ -473,7 +473,7 @@ footer .leg{max-width:760px}
 <script>
 /* ---- configuração (trocar aqui) ---- */
 var CHECKOUT = "https://pay.kiwify.com.br/QAPyhEH";   // checkout da Kiwify (Hotmart/Cakto: trocar aqui se preferir)
-var PRECO    = "67,99";                               // preço exibido (precisa ser igual ao da Kiwify/Hotmart)
+var PRECO    = "47,99";                               // preço exibido (precisa ser igual ao da Kiwify/Hotmart)
 var PRECO_DE = "399,99";                              // preço de referência riscado ("De R$ … por"). Só use um preço que foi realmente praticado. Vazio ("") = a linha e o selo somem
 var LOTE     = "";                                    // ex.: "Preço de lançamento até 15/11" — só use se o preço realmente subir na data
 var VERAO    = new Date(2026, 11, 21);                // 21/12/2026 (início do verão)
@@ -681,7 +681,7 @@ function resultado(){
   +'<div class="bloco"><span class="k">Sua proteína</span><span class="big">≈ '+pg+'<small>g por dia</small></span><p>Ponto de partida do manual: <b>2,0 g por kg</b>, dentro da faixa de 1,6 a 2,4 g/kg descrita em revisões de especialistas (Hector &amp; Phillips, 2018; Morton et al., 2018). Para você: de <b>'+lo+' a '+hi+' g</b> por dia, em 4 refeições de cerca de <b>'+porRef+' g</b>.</p><p class="peq">Ponto de partida, não regra individual. O manual explica como ajustar e quanto de cada alimento rende 30 g de proteína.</p></div>'
   +kc+cx
   +'<div class="bloco"><span class="k">E mais o que está no pacote</span><ul class="inc"><li>Manual em PDF, com a fonte de cada afirmação (98 referências)</li><li>Treino na TV, com exercícios animados e cronômetro de descanso</li><li>23 cartões para guardar no celular</li><li>Planilha que calcula média do peso, ritmo e proteína sozinha</li><li>Regras de decisão para toda segunda-feira</li></ul><p class="peq">Pagamento único de R$ '+PRECO+' · acesso vitalício · 7 dias de garantia.</p></div>'
-  +'<div class="rs-of"><span class="k"><i></i>A decisão é sua</span><div class="rs-of-t">Eu ainda quero mudar de vida</div>'+(deHtml()?'<div class="de">'+deHtml()+'</div>':'')+'<div class="rs-of-p"><small>R$</small>'+PRECO+'</div><p>Dá <b>R$ 1,62 por dia</b> nas 6 semanas · pagamento único · acesso vitalício · 7 dias de garantia</p><div class="rel" id="rel2" hidden></div></div>'
+  +'<div class="rs-of"><span class="k"><i></i>A decisão é sua</span><div class="rs-of-t">Eu ainda quero mudar de vida</div>'+(deHtml()?'<div class="de">'+deHtml()+'</div>':'')+'<div class="rs-of-p"><small>R$</small>'+PRECO+'</div><p>Dá <b>R$ 1,14 por dia</b> nas 6 semanas · pagamento único · acesso vitalício · 7 dias de garantia</p><div class="rel" id="rel2" hidden></div></div>'
   +'<p class="peq" style="margin-bottom:12px">Material educativo, baseado em fontes públicas. Não foi elaborado nem assinado por nutricionista ou profissional de Educação Física e não os substitui. Resultados variam de pessoa para pessoa; nada aqui é garantia de resultado. Suas respostas ficaram só neste aparelho.</p>'
   +'<div class="rs-cta"><a class="cta grande alerta" id="qbuy" href="'+checkoutUrl()+'" data-ev="InitiateCheckout">Eu ainda quero mudar de vida!</a><p class="rs-preco">Protocolo Verão X · R$ '+PRECO+' · acesso vitalício</p><a class="link" href="#oferta" id="qver">Ver tudo o que está incluso</a></div></div>';
   BODY.innerHTML=h;BODY.scrollTop=0;relogio(document.getElementById("rel2"));
