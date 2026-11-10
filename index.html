@@ -197,6 +197,10 @@ footer .leg{max-width:760px}
 .hero2{background:var(--g);color:#fff;position:relative;overflow:hidden;padding:30px 0 0}
 .hero2 .wrap{position:relative;display:grid;gap:0;grid-template-columns:1fr}
 .h-head{padding-bottom:4px}
+.cta-topo{margin:2px 0 6px}
+.cta-topo .micro{margin-top:8px;font-size:12.5px}
+@media(max-width:859px){.so-desk{display:none!important}.hero2 h1{margin-bottom:14px}.modelo{width:min(330px,68%);margin:16px auto 22px}}
+@media(min-width:860px){.cta-topo{display:none}}
 .hero2 h1{font-size:clamp(46px,11.5vw,84px);margin-bottom:16px}
 .hero2 h1 b{color:var(--sol);font-weight:800}
 .hero2 .lead{color:#D5D6DA;margin-bottom:22px}
@@ -308,14 +312,15 @@ footer .leg{max-width:760px}
     <div class="h-head">
       <span class="kick" style="color:#fff;opacity:.85">Protocolo Verão X · Edição Verão 2026/27</span>
       <h1 id="h1">Faltam <b>menos de 50 dias</b> pro verão. <b>Ainda dá tempo</b> de secar.</h1>
+      <div class="cta-topo"><button class="cta grande" type="button" data-quiz>Montar meu protocolo</button><p class="micro" style="color:#9da0a8">Leva cerca de 1 minuto · +18 · suas respostas ficam só no seu aparelho</p></div>
     </div>
     <div class="h-img">
       <div class="modelo"><img src="modelo.webp" alt="Atleta fictício, gerado por IA, treinando com halteres" width="900" height="900" fetchpriority="high"></div>
     </div>
     <div class="h-body">
       <p class="lead">O protocolo de 6 semanas cabe no tempo que resta, se você largar na segunda. Responda perguntas rápidas (peso, altura, rotina e o que gosta de comer) e veja o treino, a proteína e o cardápio-exemplo que combinam com você.</p>
-      <button class="cta grande" type="button" data-quiz style="max-width:440px">Montar meu protocolo</button>
-      <p class="micro" style="color:#9da0a8">Leva cerca de 1 minuto · +18 · suas respostas ficam só no seu aparelho</p>
+      <button class="cta grande so-desk" type="button" data-quiz style="max-width:440px">Montar meu protocolo</button>
+      <p class="micro so-desk" style="color:#9da0a8">Leva cerca de 1 minuto · +18 · suas respostas ficam só no seu aparelho</p>
       <div class="sel"><span>Figura de cada exercício</span><span>Cardápio-exemplo calculado com a TACO</span><span>7 dias de garantia</span></div>
     </div>
   </div>
